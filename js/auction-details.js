@@ -114,19 +114,14 @@ function generateAuctionInternalPage() {
                                                 </div>
 
                                             </div>
-
-                                         
-    
+                                    
                                         </div>
 
                                         <div class="auctions-details__swipe-icon d-flex d-md-none">
                                             <img src="./assets/swipe-icon.svg" alt="logo" />                                      
                                         </div>
                                     </div>
-
-
-                              
-
+                         
                                     <div class="scrolling-block col-12 col-lg-7">
                                         <div class="auctions-details__right">
 

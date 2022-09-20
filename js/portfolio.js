@@ -1,144 +1,386 @@
 "use strict";
 
-let assetsContent = [{
-    image: "assets/btc-fund.png",
-    name: "Apple",
-    subName: "AAPL",
-    balance: "10",
-    allocations: "10",
-    price: "160.00",
-    d5: "2.21",
-    value: "1, 600.00",
+let fundingContent = {
+  chartImage: "assets/portfolio-chart.png",
+  items: [{
+      image: "assets/btc-fund.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+    {
+      image: "assets/btc-fund.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+    {
+      image: "assets/btc-fund.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+    {
+      image: "assets/btc-fund.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+    {
+      image: "assets/btc-fund.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+    {
+      image: "assets/btc-fund.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+    {
+      image: "assets/btc-fund.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+    {
+      image: "assets/btc-fund.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+    {
+      image: "assets/btc-fund.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+    {
+      image: "assets/btc-fund.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+
+    {
+      image: "assets/btc-fund.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+
+  ],
+};
+
+let cashflow = [{
+  image: "assets/cashflow-chart.png",
+  value: "$ 10 , 000",
+}, ];
+
+let contractContent = [{
+    chart: "assets/contract-chart.png",
+    image: "assets/cotract-image.png",
+    name: "Etherium",
+    subName: "ETH",
+    days: "26 days",
+    transaction: "0.04",
+    volume: "10,000",
+    revenue: "$ 150.59",
   },
   {
-    image: "assets/btc-fund.png",
-    name: "Apple",
-    subName: "AAPL",
-    balance: "10",
-    allocations: "10",
-    price: "160.00",
-    d5: "2.21",
-    value: "1, 600.00",
+    chart: "assets/contract-chart.png",
+    image: "assets/cotract-image.png",
+    name: "Etherium",
+    subName: "ETH",
+    days: "26 days",
+    transaction: "0.04",
+    volume: "10,000",
+    revenue: "$ 150.59",
+  },
+  {
+    chart: "assets/contract-chart.png",
+    image: "assets/cotract-image.png",
+    name: "Etherium",
+    subName: "ETH",
+    days: "26 days",
+    transaction: "0.04",
+    volume: "10,000",
+    revenue: "$ 150.59",
+  },
+  {
+    chart: "assets/contract-chart.png",
+    image: "assets/cotract-image.png",
+    name: "Etherium",
+    subName: "ETH",
+    days: "26 days",
+    transaction: "0.04",
+    volume: "10,000",
+    revenue: "$ 150.59",
   },
 
 ];
 
-function renderMarket() {
-  let marketScrollableContainer = $(".trade__assets__items");
-  let marketFixedContainer = $(".assets__items__fixed");
 
-  let marketScrolableHeader = `<div class="trade-chart__assets__row trade-chart__assets__row--header">
-                                <div class="trade-market__items">
-                              
-                                    <div class="market__item">
-                                        Balance
+function renderChart() {
+  let chartAssetsContainer = $(".portfolio__assets__items");
+  let chartImageContainer = $(".portfolio__chart");
+  let chartImageSrc = fundingContent.chartImage;
+  let chartImage = `<img src="${chartImageSrc}" alt="chartImage"/>`;
+
+  let chartIconsContainer = $(".portfolio__assets__icons");
+
+  chartImageContainer.append(chartImage);
+
+  let chartAssetsHeader = `<div class="portfolio__assets__row portfolio__assets__row--header">
+                                <div class="assets__items">
+                                    <div class="assets__item">
+                                        Name
                                     </div>
 
-                                    <div class="market__item">
-                                        Allocations
-                                    </div>
-
-                                    <div class="market__item">
+                                    <div class="assets__item">
                                         Price
                                     </div>
 
-                                    <div class="market__item">
-                                        5D
+                                    <div class="assets__item">
+                                        Amount
                                     </div>
 
-                                    <div class="market__item">
-                                        Esitmated Value                                   
+                                    <div class="assets__item">
+                                        Balance
                                     </div>
-                                
+
+                                    <div class="assets__item">
+                                        Allocation
+                                    </div>
+
+                                    <div class="assets__item">
+                                      P/L
+                                  </div>
+
                                 </div>
                            </div>`;
 
-  let marketFixedHeader = `<div class="trade-chart__assets__row trade-chart__assets__row--header">
-                            <div class="trade-market__items">
-                        
-                               <div class="market__item">
-                                   Assets
-                               </div>     
+  chartAssetsContainer.append(chartAssetsHeader);
 
-                           </div>
-                      </div>`;
+  for (let i = 0; i < fundingContent.items.length; i++) {
+    chartAssetsContainer.append(`<div class="portfolio__assets__row">
+                            
+                                      <div class="assets__items">
 
-  marketScrollableContainer.append(marketScrolableHeader);
-  marketFixedContainer.append(marketFixedHeader);
-
-  for (let i = 0; i < assetsContent.length; i++) {
-
-    //Scrollable market data
-
-    marketScrollableContainer.append(`<div class="trade-chart__assets__row">
-
-    <div class="trade-market__items">
-
-            <div class="market__item">
-                ${assetsContent[i].balance}
-                <div class="market__item--purple px-2">
-                  Shares                                                                                            
-                </div>
-            </div>
-
-            <div class="market__item">
-                ${assetsContent[i].allocations}
-                <div class="market__item--purple px-2">
-                  %                                                                                           
-                </div>
-            </div>
-
-            <div class="market__item">
-                ${assetsContent[i].price} 
-                <div class="market__item--purple px-2">
-                  USD                                                                                          
-                </div>                                                  
-            </div>
-
-            <div class="market__item market__item--green">
-                ${assetsContent[i].d5}
-                <div class="market__item--purple px-2">
-                  %                                                                                           
-                </div>                                              
-            </div> 
-
-            <div class="market__item">
-                ${assetsContent[i].value}
-                <div class="market__item--purple px-2">
-                  USD                                                                                          
-                </div>                                                  
-            </div>                                                 
-        </div>                 
-    `);
-
-    //Fixed market data
-    marketFixedContainer.append(`<div class="trade-chart__assets__row">
-
-                                      <div class="trade-market__items">                                              
-
-                                            <div class="market__item">
-
-                                                <img src="${assetsContent[i].image}" />
-
-                                                <div>
-                                                  <div class="market__item__name">
-                                                    ${assetsContent[i].name}
-                                                  </div>
-
-                                                  <div class="market__item__subname">
-                                                    ${assetsContent[i].subName}
-                                                  </div>
+                                            <div class="assets__item">
+                                                    
+                                                 <div class="assets__items__title">
+                                                    ${fundingContent.items[i].name}
                                                 </div>
-                                            
-                                            </div>                                   
+
+                                                <div class="assets__item__subname">
+                                                    ${fundingContent.items[i].subName} 
+                                                </div>                                                    
+                                 
+                                            </div>
+                                   
+                                              <div class="assets__item">
+                                                  ${fundingContent.items[i].price}
+                                                  <div class="assets__item__usd">
+                                                      USD
+                                                  </div>                                                      
+                                              </div>
+  
+                                              <div class="assets__item">
+                                                  ${fundingContent.items[i].pamount}
+                                              </div>
+  
+                                              <div class="assets__item">
+                                                  ${fundingContent.items[i].balance}
+                                                  <div class="assets__item__usd">
+                                                      USD
+                                                  </div>                                                   
+                                              </div>
+  
+                                              <div class="assets__item">
+                                                  ${fundingContent.items[i].allocation}
+  
+                                                  <div class="assets__item__percentage">
+                                                      %
+                                                  </div>                                                   
+                                              </div>
+
+                                              <div class="assets__item">
+                                                ${fundingContent.items[i].pl}
+
+                                                <div class="assets__item__percentage">
+                                                    %
+                                                </div>                                                   
+                                            </div>
                                       </div>                 
                                   `);
   }
+
+  for (let i = 0; i < fundingContent.items.length; i++) {
+    chartIconsContainer.append(`<div class="portfolio__assets__icon">
+        <img src="${fundingContent.items[i].image}" alt="${fundingContent.items[i].name}"/>
+
+    `);
+  }
 }
 
+function renderCashflow() {
+  let CashflowContent = $(".cashflow");
+
+  for (let i = 0; i < cashflow.length; i++) {
+    CashflowContent.append(`<div class="row cashflow__content">
+
+                              <div class="d-flex justify-content-between">
+                                <div class="cashflow__title">
+                                   Cashflow
+                                </div>
+
+                                <div class="row weeks align-items-center">
+                                  <div class="col-3 week week--purple">2W</div>
+                                  <div class="col-3 week">4W</div>
+                                  <div class="col-3 week">6W</div>
+                                  <div class="col-3 week">7W</div>
+                                </div>
+                              </div>
+
+                              <div class="cashflow__value">
+                                ${cashflow[i].value}
+                              </div>
+
+                              <div class="cashflow__chart">
+                                <img src="${cashflow[i].image}" alt=""/>                   
+                              </div>   
+                                   
+                            </div>`);
+  }
+}
+
+function renderContract() {
+  let CashflowContent = $(".contracts__container");
+
+  for (let i = 0; i < contractContent.length; i++) {
+    CashflowContent.append(`<div class="contracts__item">
+                              <div class="row">
+    
+                                <div class="col-6">
+
+                                  <div class="d-flex pt-2">
+                                    <div class="contracts__item__image d-flex justify-content-center align-items-center p-2">
+                                      <img src="${contractContent[i].image}" alt=""/>                                 
+                                    </div>
+
+                                    <div class="d-flex flex-column">
+                                      <div class="contracts__item__name">
+                                        ${contractContent[i].name}                                 
+                                      </div>
+
+                                      <div class="d-flex contracts__item__component">
+                                        <div class="pe-3">
+                                          ${contractContent[i].subName}                      
+                                        </div>
+
+                                        <div>
+                                          ${contractContent[i].days}                                       
+                                        </div>
+                                      </div> 
+                                      
+                                    </div>                                                       
+                                  </div>
+
+                                  <div class="p-2 py-1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div class="contracts__numbers pb-1">
+                                        ${contractContent[i].transaction}
+                                      </div>
+
+                                      <div class="contracts__text">
+                                        % / Transaction                              
+                                      </div>
+
+                                    </div>
+                                                    
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div class="contracts__numbers">
+                                        ${contractContent[i].volume}                      
+                                      </div>
+
+                                      <div class="contracts__text">
+                                        Monthly Volume                                             
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="border-line"></div>
+                                
+                                <div class="contract__chart col-6">
+                                  <div class="p-2 px-3">
+                                    <img src="${contractContent[i].chart}" alt=""/> 
+                                  
+                                  </div>
+
+                                  <div class="d-flex align-items-center justify-content-between p-2 px-3">
+                                    <div class="contract__revenue__title">
+                                      Total Revenue
+                                    </div>
+                                    <div class="contract__revenue__value">
+                                      ${contractContent[i].revenue}                      
+                                    </div>
+                                  </div>                
+                                </div>   
+
+                              </div>    
+                            </div>`);
+  }
+}
 
 $(document).ready(function () {
-  renderMarket();
-  renderPrice();
-  renderInfo();
+  renderChart();
+  renderCashflow();
+  renderContract();
 });

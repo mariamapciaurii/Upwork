@@ -1,100 +1,99 @@
 "use strict";
 
 let fundingContent = {
-  chartImage: "assets/chart.png",
-  items: [
-    {
-      itemImage: "assets/btc-fund.png",
-      itemName: "Bitcoin",
-      itemSubName: "BCT",
-      itemPrice: "7 024",
-      itemUsd: "USD",
-      itemAmount: "12",
-      itemBalance: "433.12B",
-      itemAllocation: "100",
-      percentage: "%",
-    },
-    {
-      itemImage: "assets/btc-fund.png",
-      itemName: "GST",
-      itemSubName: "GST",
-      itemPrice: "16 500",
-      itemUsd: "EUR",
-      itemAmount: "2",
-      itemBalance: "433.12B",
-      itemAllocation: "100",
-      percentage: "%",
-    },
-    {
-      itemImage: "assets/btc-fund.png",
-      itemName: "DogeCoin",
-      itemSubName: "DGC",
-      itemPrice: "4 140",
-      itemUsd: "USD",
-      itemAmount: "25",
-      itemBalance: "433.12B",
-      itemAllocation: "100",
-      percentage: "%",
-    },
-    {
-      itemImage: "assets/btc-fund.png",
-      itemName: "Etherium",
-      itemSubName: "ETH",
-      itemPrice: "21 200",
-      itemUsd: "USD",
-      itemAmount: "42",
-      itemBalance: "433.12B",
-      itemAllocation: "100",
-      percentage: "%",
-    },
-  ],
+    chartImage: "assets/chart.png",
+    items: [{
+            itemImage: "assets/btc-fund.png",
+            itemName: "Bitcoin",
+            itemSubName: "BCT",
+            itemPrice: "7 024",
+            itemUsd: "USD",
+            itemAmount: "12",
+            itemBalance: "433.12B",
+            itemAllocation: "100",
+            percentage: "%",
+        },
+        {
+            itemImage: "assets/btc-fund.png",
+            itemName: "GST",
+            itemSubName: "GST",
+            itemPrice: "16 500",
+            itemUsd: "EUR",
+            itemAmount: "2",
+            itemBalance: "433.12B",
+            itemAllocation: "100",
+            percentage: "%",
+        },
+        {
+            itemImage: "assets/btc-fund.png",
+            itemName: "DogeCoin",
+            itemSubName: "DGC",
+            itemPrice: "4 140",
+            itemUsd: "USD",
+            itemAmount: "25",
+            itemBalance: "433.12B",
+            itemAllocation: "100",
+            percentage: "%",
+        },
+        {
+            itemImage: "assets/btc-fund.png",
+            itemName: "Etherium",
+            itemSubName: "ETH",
+            itemPrice: "21 200",
+            itemUsd: "USD",
+            itemAmount: "42",
+            itemBalance: "433.12B",
+            itemAllocation: "100",
+            percentage: "%",
+        },
+    ],
 };
 
 let depositContent = {
-  itemName: "Bitcoin >",
-  itemComment: "BTC wallet",
-  qrImage: "assets/btc-qr.png",
-  btAddressName: "BTC address",
-  btAddress: "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
-  copyImage: "assets/copy-icon.svg",
-  comment: "only send Bitcoin (BTC) to this address",
-  infoIcon: "assets/info.svg",
+    itemName: "Bitcoin >",
+    itemComment: "BTC wallet",
+    qrImage: "assets/btc-qr.png",
+    btAddressName: "BTC address",
+    btAddress: "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+    copyImage: "assets/copy-icon.svg",
+    comment: "only send Bitcoin (BTC) to this address",
+    infoIcon: "assets/info.svg",
 };
 
 let withdrawContent = {
-  itemName: "Bitcoin >",
-  amount: "amount",
-  amountNum: "0",
-  amounValue: "BTC",
-  cad: "CAD",
-  swapIcon: "assets/swap.svg",
-  percentage25: "25%",
-  percentage50: "50%",
-  percentage75: "75%",
-  percentage100: "100%",
-  balanceName: "Balance",
-  balanceValue: "0.001 BTC  = 12 CAD",
-  minimumWithdrawl: "Minimum Withdrawl",
-  minimumWithdrawlValue: "0.000001 BTC = 0.5 CAD",
-  maxWithdrawl: "Maximum Withdrawl",
-  maxWithdrawlValue: "0.001 BTC = 12 CAD",
-  withdrawlFee: "Withdrawl Fee",
-  withdrawlFeeValue: "0.0000001 BTC = 0.01 CAD",
-  option: "RI Account or  Withdrawl Adress",
-  arrowDown: "assets/arrow-down.svg",
+    itemName: "Bitcoin >",
+    amount: "amount",
+    amountNum: "0",
+    amounValue: "BTC",
+    cad: "CAD",
+    swapIcon: "assets/swap.svg",
+    percentage25: "25%",
+    percentage50: "50%",
+    percentage75: "75%",
+    percentage100: "100%",
+    balanceName: "Balance",
+    balanceValue: "0.001 BTC  = 12 CAD",
+    minimumWithdrawl: "Minimum Withdrawl",
+    minimumWithdrawlValue: "0.000001 BTC = 0.5 CAD",
+    maxWithdrawl: "Maximum Withdrawl",
+    maxWithdrawlValue: "0.001 BTC = 12 CAD",
+    withdrawlFee: "Withdrawl Fee",
+    withdrawlFeeValue: "0.0000001 BTC = 0.01 CAD",
+    option: "RI Account or  Withdrawl Adress",
+    arrowDown: "assets/arrow-down.svg",
 };
 
 function renderChart() {
-  let chartAssetsContainer = $(".chart__assets__items");
-  let chartImageContainer = $(".chart__image");
-  let chartImageSrc = fundingContent.chartImage;
-  let chartImage = `<img src="${chartImageSrc}" alt="chartImage"/>`;
+    let chartAssetsContainer = $(".chart__assets__items");
+    let chartImageContainer = $(".chart__image");
+    let chartImageSrc = fundingContent.chartImage;
+    let chartImage = `<img src="${chartImageSrc}" alt="chartImage"/>`;
 
-  let chartIconsContainer = $(".chart__assets__icons");
+    let chartIconsContainer = $(".chart__assets__icons");
 
-  chartImageContainer.append(chartImage);
+    chartImageContainer.append(chartImage);
 
-  let chartAssetsHeader = `<div class="chart__assets__row chart__assets__row--header">
+    let chartAssetsHeader = `<div class="chart__assets__row chart__assets__row--header">
                                 <div class="funding__items">
                                     <div class="funding__item">
                                         Name
@@ -118,10 +117,10 @@ function renderChart() {
                                 </div>
                            </div>`;
 
-  chartAssetsContainer.append(chartAssetsHeader);
+    chartAssetsContainer.append(chartAssetsHeader);
 
-  for (let i = 0; i < fundingContent.items.length; i++) {
-    chartAssetsContainer.append(`<div class="chart__assets__row">
+    for (let i = 0; i < fundingContent.items.length; i++) {
+        chartAssetsContainer.append(`<div class="chart__assets__row">
                             
                                       <div class="funding__items">
 
@@ -165,19 +164,19 @@ function renderChart() {
                                         
                                       </div>                 
                                   `);
-  }
+    }
 
-  for (let i = 0; i < fundingContent.items.length; i++) {
-    chartIconsContainer.append(`<div class="chart__assets__icon">
+    for (let i = 0; i < fundingContent.items.length; i++) {
+        chartIconsContainer.append(`<div class="chart__assets__icon">
         <img src="${fundingContent.items[i].itemImage}" alt="${fundingContent.items[i].itemName}"/>
     `);
-  }
+    }
 }
 
 function renderDeposit() {
-  let depositContainer = $(".deposit");
+    let depositContainer = $(".deposit");
 
-  depositContainer.prepend(`<div class="funding__items__content--right">
+    depositContainer.prepend(`<div class="funding__items__content--right">
                                             <div class="funding__buttons">
                                                 <div class="funding__button-wrapper">
                                                     <button class="funding__button funding__button__deposit">
@@ -341,36 +340,36 @@ function renderDeposit() {
 }
 
 function fundingButtons() {
-  $(".deposit__section").show();
-  $(".withdraw__section").hide();
-
-  $(".funding__button__withdraw").click(function () {
-    // Then show div on click.
-    $(".deposit__section").hide();
-    $(".withdraw__section").show();
-  });
-  $(".funding__button__deposit").click(function () {
-    // Then show div on click.
     $(".deposit__section").show();
     $(".withdraw__section").hide();
-  });
 
-  $(".funding__button__withdraw").on("click", function () {
-    //then remove selected class.
-    $(".funding__button").removeClass("funding__button__deposit");
-  });
+    $(".funding__button__withdraw").click(function () {
+        // Then show div on click.
+        $(".deposit__section").hide();
+        $(".withdraw__section").show();
+    });
+    $(".funding__button__deposit").click(function () {
+        // Then show div on click.
+        $(".deposit__section").show();
+        $(".withdraw__section").hide();
+    });
 
-  $(".funding__button").on("click", function () {
-    //then remove and add selected class.
-    $(".funding__button").removeClass("selected");
-    $(this).addClass("selected");
-  });
+    $(".funding__button__withdraw").on("click", function () {
+        //then remove selected class.
+        $(".funding__button").removeClass("funding__button__deposit");
+    });
+
+    $(".funding__button").on("click", function () {
+        //then remove and add selected class.
+        $(".funding__button").removeClass("selected");
+        $(this).addClass("selected");
+    });
 }
 
 $(document).ready(function () {
-  renderChart();
-  renderDeposit();
-  fundingButtons();
+    renderChart();
+    renderDeposit();
+    fundingButtons();
 });
 
 var scrollableContainer = document.querySelector(".funding__container");
@@ -380,19 +379,19 @@ var scrollableContainer = document.querySelector(".funding__container");
 var hammerSwipe = new Hammer(scrollableContainer);
 
 if (isMobile) {
-  hammerSwipe.on("swipeleft swiperight", (event) => {
-    switch (event.type) {
-      case "swipeleft":
-        scrollableContainer.style.transform = "translateX(-104%)";
+    hammerSwipe.on("swipeleft swiperight", (event) => {
+        switch (event.type) {
+            case "swipeleft":
+                scrollableContainer.style.transform = "translateX(-104%)";
 
-        console.log("left");
-        break;
-      case "swiperight":
-        scrollableContainer.style.transform = "translateX(0)";
-        console.log("right");
-        break;
-    }
-  });
+                console.log("left");
+                break;
+            case "swiperight":
+                scrollableContainer.style.transform = "translateX(0)";
+                console.log("right");
+                break;
+        }
+    });
 }
 
 // listen to events...
