@@ -1,0 +1,409 @@
+/* TRADE ACTIVE GEADER */
+.header__navbar__item--active {
+  background: radial-gradient(137.7% 1080.43% at -26.35% -38.1%,
+      #88c9ee 0%,
+      #e7f6fc 22.4%,
+      #b66de6 44.79%,
+      #d1e6fb 81.77%,
+      #92a1eb 100%);
+  border-radius: 15px;
+}
+
+html.page-trade {
+  height: 100%;
+}
+
+body.page-trade {
+  background: black;
+  height: 100%;
+  overflow: hidden;
+}
+
+.trade {
+  height: calc(100% - 121px);
+}
+
+.trade .container {
+  height: 100%;
+}
+
+.trade__container {
+  height: 100%;
+}
+
+.trade__container .row {
+  height: 100%;
+}
+
+.trade__market {
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+.trade__market__content {
+  height: 100%;
+  overflow: auto;
+  border-radius: 30px;
+}
+
+.trade__market__content--left {
+  margin-bottom: 50px;
+}
+
+.trade__market__content--right {
+  margin-top: 130px;
+}
+
+/* MARKET PLACE WITH ASSETS*/
+
+.trade__market__header {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  color: rgba(242, 240, 255, 0.88);
+  margin-top: 66px;
+  margin-bottom: 12px;
+}
+
+.chart__image img {
+  width: 100%;
+}
+
+.chart__assets__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.chart__assets__content {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.chart__assets__items {
+  min-width: 910px;
+}
+
+.chart__assets__items__scrollable {
+  width: 100%;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.chart__assets__row {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #1e1d1d;
+}
+
+.chart__assets__icons {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.chart__assets__icon {
+  height: 65px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-bottom: 1px solid #1e1d1d;
+}
+
+.chart__assets__icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.market__items {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+}
+
+.market__item {
+  display: flex;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+  width: 100%;
+}
+
+.chart__assets__row--header .market__item {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.chart__assets__items__fixed {
+  width: 283px;
+}
+
+.market__item--id {
+  width: 50px;
+  font-size: 12px;
+  color: #afadad;
+}
+
+.market__item img {
+  width: 25px;
+  margin-right: 6px;
+}
+
+.market__item--green {
+  color: #16c784;
+}
+
+.market__item--red {
+  color: #ea3943;
+}
+
+.market__item__info_icon img {
+  width: 15px !important;
+  margin-left: 3px;
+  margin-right: 0 !important;
+}
+
+.market__item__volume {
+  display: flex;
+  flex-direction: column;
+}
+
+.market__item__volume_bottom {
+  color: #afadad;
+  font-size: 12px;
+}
+
+/* ORDER SECTION LEFT SIDE */
+
+.order__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  padding: 14px 8px;
+}
+
+.order__container {
+  border: 1.5px solid #252439;
+  border-radius: 30px;
+  padding: 8px 12px;
+}
+
+.order__tab {
+  background: linear-gradient(180deg, #161616 0%, #17161c 72.78%, #191724 100%);
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 19px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.order__tab--green :first-child {
+  border: 1.5px solid #4c8f5d;
+  border-radius: 5px;
+  width: 50%;
+  color: #4c8f5d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.order__tab--green :last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a19ebb;
+  width: 50%;
+  padding: 8px;
+}
+
+.order__tab--blue {
+  color: #a19ebb;
+}
+
+.order__tab__bg {
+  border: 1.5px solid #483aa9;
+  border-radius: 5px;
+  background-color: #211f33;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  color: #a19ebb;
+}
+
+.order__input {
+  position: relative;
+  background: linear-gradient(180deg, #161616 0%, #17161c 72.78%, #191724 100%);
+  border-radius: 5px;
+  margin-bottom: 19px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #726a89;
+}
+
+.order__input input {
+  color: #fff;
+  background: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: none;
+  border: none;
+  padding: 14px 8px;
+  height: 100%;
+}
+
+.order__input input:not(:placeholder-shown)+label {
+  transform: translateY(-20px);
+}
+
+.order__input input:not(:placeholder-shown) {
+  transform: translateY(5px);
+}
+
+.order__input__label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #726a89;
+  z-index: 99;
+  transition: transform 200ms ease-in;
+}
+
+.order__input__specifier {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #5c556d;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+  text-transform: uppercase;
+}
+
+.order__form__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 19px;
+}
+
+.order__form__footer_title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #726a89;
+  width: 33.3%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.order__form__footer_value {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order__form__footer_specifier {
+  font-size: 15px;
+  line-height: 18px;
+  color: #5c556d;
+  width: 33.3%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  text-transform: uppercase;
+  padding-right: 6px;
+}
+
+.order__subtmit button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 119px;
+  background: linear-gradient(90.74deg, #271e60 8.32%, #3b1d54 93.99%);
+  border-radius: 5px;
+  color: #d6d0d0;
+  width: 100%;
+  margin-top: 19px;
+  cursor: pointer;
+}
+
+.order__form__border {
+  border-top: 1.5px solid #252439;
+}
+
+.market__item__link {
+  cursor: pointer;
+}
+
+.trade__market__weeks {
+  color: #D6D0D0;
+  background: #18171C;
+  border-radius: 10px;
+  margin-right: 12px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.trade__market__week {
+  padding: 6.5px 16px;
+}
+
+.trade__market__week--purple {
+  border-radius: 5px;
+  border: 1.5px solid #483aa9;
+}
+
+.trade__market__top {
+  margin-bottom: 5px;
+}

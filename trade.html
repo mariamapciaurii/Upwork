@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="page-trade">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+
+    <title>Rich Investors</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/trade.css">
+
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="css/_media.css">
+    
+</head>
+
+<body class="page-trade">
+    <header class="header">
+        <div class="container">
+            <div class="header__content row justify-content-between">
+
+                <div class="header__left col-12 col-md-10">
+                    <div class="header__logo">
+                        <a href="portfolio.html">
+                            <img src="./assets/logo.svg" alt="logo" />
+                        </a>
+                    </div>
+
+                    <div class="header__navbar d-flex">
+                        <div class="header__navbar__item">
+                            <a class="header__navbar__link" href="portfolio.html"> Portfolio </a>
+                        </div>
+
+                        <div class="header__navbar__item header__navbar__item--active">
+                            <a class="header__navbar__link" href="trade.html"> Trade </a>
+                        </div>
+
+                        <div class="header__navbar__item">
+                            <a class="header__navbar__link" href="index.html"> Auctions </a>
+                        </div>
+
+                        <div class="header__navbar__item">
+                            <a class="header__navbar__link" href="funding.html"> Funding </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header__right col-12 col-xl-2 d-flex align-items-center justify-content-end">
+
+                    <!-- Search -->
+                    <div class="ri-search d-none d-lg-flex">
+                        <input type="text" name="search" placeholder="Search" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="trade">
+        <div class="container">
+            <div class="trade__container">
+
+                <div class="row">
+                    <div class="trade__market col-12 col-lg-8">
+
+                        <div class="trade__market__content trade__market__content--left">
+
+                            <div class="chart__image">
+
+                                <div class="d-flex align-items-end justify-content-between trade__market__top">
+                                    <div class="trade__market__header">
+                                        Cryoto Market
+                                    </div>
+
+                                    <div class="row trade__market__weeks">
+                                        <div class="col-3 trade__market__week trade__market__week--purple">2W</div>
+                                        <div class="col-3 trade__market__week">4W</div>
+                                        <div class="col-3 trade__market__week">6W</div>
+                                        <div class="col-3 trade__market__week">7W</div>
+
+                                    </div>
+                                </div>
+
+                                <img src="./assets/market-chart.png" alt="market-chart">
+
+                            </div>
+
+                            <div class="chart__assets">
+
+                                <div class="chart__assets__content">
+
+                                    <div class="chart__assets__items__fixed">
+
+                                    </div>
+
+                                    <div class="chart__assets__items__scrollable">
+
+                                        <div class="chart__assets__items">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="order col-12 col-lg-4 d-none d-md-block">
+                        <div class="trade__market__content--right">
+                            <div class="order__title"> Quick Order </div>
+
+                            <div class="order__container">
+                                <div class="order__input">
+
+                                    <input type="text" placeholder=" " />
+                                    <label class="order__input__label">Ticker</label>
+
+                                    <div class="order__input__specifier">AAPL</div>
+                                </div>
+
+                                <div class="order__tab order__tab--green">
+                                    <div>Buy</div>
+                                    <div>Sell</div>
+                                </div>
+
+                                <div class="order__tab order__tab--blue">
+                                    <div class="order__tab__bg">Limit</div>
+                                    <div>Market</div>
+
+                                    <div class="d-flex">
+                                        <div class="pe-2">Advenced</div>
+                                        <img src="/assets/arrow-down.svg" alt="arrow" />
+                                    </div>
+                                </div>
+
+
+                                <div class="order__input">
+
+                                    <input type="text" placeholder=" " />
+                                    <label class="order__input__label">Limit Price</label>
+
+                                    <div class="order__input__specifier">USD</div>
+                                </div>
+
+                                <div class="order__input">
+
+                                    <input type="text" placeholder=" " />
+                                    <label class="order__input__label">Quaintity</label>
+
+                                    <div class="order__input__specifier">AAPL</div>
+                                </div>
+
+                                <div class="order__input">
+
+                                    <input type="text" placeholder=" " />
+                                    <label class="order__input__label">Duration</label>
+
+                                    <div class="order__input__specifier">GOOD TILL CANCEL</div>
+                                </div>
+
+                                <div class="order__form__border">
+                                    <div class="order__form__footer">
+                                        <div class="order__form__footer_title">Buying Power</div>
+                                        <div class="order__form__footer_value">10,00,00</div>
+                                        <div class="order__form__footer_specifier">usd</div>
+                                    </div>
+
+                                    <div class="order__form__footer">
+                                        <div class="order__form__footer_title">Order</div>
+                                        <div class="order__form__footer_value">12,00,00</div>
+                                        <div class="order__form__footer_specifier">usd</div>
+                                    </div>
+                                </div>
+
+                                <div class="order__subtmit">
+                                    <button>Submit</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="px-5">
+                <div class="order__tab order__tab--green d-flex d-sm-none">
+                    <div>Buy</div>
+                    <div>Sell</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="./js/hammer.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/trade.js"></script>
+
+
+</body>
+
+</html>

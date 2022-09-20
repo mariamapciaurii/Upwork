@@ -1,0 +1,20 @@
+.ri-search {
+  width: 100%;
+}
+
+.ri-search input {
+  background: #131417;
+  border-radius: 30px !important;
+  border: none !important;
+  padding: 12px 0 !important;
+  color: rgba(255, 255, 255, 0.39);
+  font-size: 15px !important;
+  outline: none !important;
+  width: 100% !important;
+}
+
+.ri-search input:-webkit-autofill {
+  background-clip: text;
+}
+
+/* SEARCH FPR MOBILE*/

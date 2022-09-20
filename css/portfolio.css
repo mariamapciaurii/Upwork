@@ -1,0 +1,150 @@
+/* PORTFOLIO ACTIVE HEADER */
+.header__navbar__item--active {
+    background: radial-gradient(137.7% 1080.43% at -26.35% -38.1%,
+            #88c9ee 0%,
+            #e7f6fc 22.4%,
+            #b66de6 44.79%,
+            #d1e6fb 81.77%,
+            #92a1eb 100%);
+    border-radius: 15px;
+}
+
+/* PORTFOLIO CHART */
+
+.portfolio__chart img {
+    width: 100%;
+}
+
+
+
+/* change classes  */
+/* MARKET PLACE  */
+.trade__market__header {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    color: rgba(242, 240, 255, 0.88);
+    margin-top: 86px;
+    margin-bottom: 12px;
+  }
+  
+  .chart__image img {
+    width: 100%;
+  }
+  
+  .trade-details___assets__content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  
+  .trade__assets__items {
+    min-width: 809px;
+  }
+  
+  .trade-assets__items__scrollable {
+    width: 100%;
+    overflow: auto;
+  }
+  
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    display: none;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .trade-chart__assets__row {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #1e1d1d;
+  }
+  
+  .chart__assets__icons {
+    width: 120px;
+    flex-shrink: 0;
+  }
+  
+  .chart__assets__icon {
+    height: 65px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    border-bottom: 1px solid #1e1d1d;
+  }
+  
+  .chart__assets__icon img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .trade-market__items {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+  }
+  
+  .market__item {
+    display: flex;
+    align-items: center;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #ffffff;
+    width: 100%;
+  }
+  
+  .trade-chart__assets__row--header .market__item {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .assets__items__fixed {
+    width: 135px;
+    margin-left: 40px;
+  }
+  
+  .market__item--id {
+    width: 50px;
+    font-size: 12px;
+    color: #afadad;
+  }
+  
+  .market__item img {
+    width: 24px;
+    margin-right: 8px;
+  }
+  
+  .market__item__subname {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #524E6C;
+  }
+  
+  .market__item--purple {
+    color: #4C4D63;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  
+  .market__item--green {
+    color: #16c784;
+  }

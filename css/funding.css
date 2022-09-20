@@ -1,0 +1,389 @@
+/* FUNDING PAGE */
+.funding {
+  overflow: hidden;
+}
+
+.funding__container {
+  margin-top: 79px;
+  position: relative;
+  transition: transform 300ms ease-out 0s;
+}
+
+.funding__buttons {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.funding__button {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  background: #18171c;
+  color: #d6d0d0;
+  border-radius: 5px;
+  padding: 5px 8px;
+}
+
+.funding__button-wrapper {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 30px;
+}
+
+.deposit__section {
+  color: white;
+  padding: 10px 30px 30px 30px;
+}
+
+.funding__button.selected {
+  border: 2px solid transparent;
+  border-image: linear-gradient(to left, rgba(126, 63, 179, 1) 1%, rgba(85, 66, 208, 1) 100%);
+  border-image-slice: 1;
+  outline: none;
+}
+
+.funding__button__deposit {
+  border: 2px solid transparent;
+  border-image: linear-gradient(to left, rgba(126, 63, 179, 1) 1%, rgba(85, 66, 208, 1) 100%);
+  border-image-slice: 1;
+  outline: none;
+}
+
+/* DEPOSIT SECTION */
+.deposit__section__title {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 31px;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.deposit__section__subtitle {
+  color: #8b919d;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.deposit__section__qr {
+  border: 2px solid #202125;
+  background: #141519;
+  border-radius: 8px;
+}
+
+.deposit__section__qr-image {
+  padding: 48px;
+}
+
+.deposit__section__qr-image img {
+  width: 100%;
+}
+
+.deposit__section__address {
+  border-top: 2px solid #202125;
+  padding: 15px;
+}
+
+.address__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.address__container img {
+  width: 18px;
+}
+
+.address__container__copy-img {
+  cursor: pointer;
+}
+
+.address__container__address {
+  color: #8b919d;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+.deposit__section__comment {
+  display: flex;
+  padding: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  background: #141519;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.deposit__section__comment img {
+  width: 18px;
+  margin-right: 10px;
+}
+
+/* WITHDRAW SECTION */
+.withdraw__section {
+  padding: 10px 30px 50px 30px;
+  /* background: #0A0B0D; */
+}
+
+.withdraw__section__title {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 31px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.withdraw__section__subtitle {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.amount__container {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.amount__container__cad {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8b919d;
+}
+
+.amount__container__num {
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 68px;
+  color: #8b919d;
+}
+
+.amount__container__value {
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 68px;
+  color: #4672ed;
+}
+
+.amount__container__cad_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 40px;
+}
+
+.amount__container__cad_content img {
+  width: 32px;
+  padding-bottom: 2px;
+}
+
+.percentage__container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.percentage__container__item {
+  background: #141519;
+  border: 2px solid #202125;
+  border-radius: 10px;
+  padding: 9px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.percentage__container__item:last-child {
+  margin-right: 0;
+}
+
+.withdraw__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.withdraw__content__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+
+.withdraw__content__value {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #334063;
+  padding-bottom: 20px;
+}
+
+.withdraw__section__select {
+  color: #334063;
+  background: #141519;
+  border: 2px solid #202125;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 19px;
+  padding: 20px 20px 20px 0px;
+}
+
+.withdraw__section__select img {
+  width: 10px;
+}
+
+/* CHART SECTION WITH ASSETS */
+
+.chart__assets__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.funding__items__assets {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 31px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.chart__assets__items {
+  min-width: 660px;
+}
+
+.chart__assets__items__scrollable {
+  width: 100%;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.funding__item__percentage,
+.funding__item__usd {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #c0c0c0;
+  opacity: 0.5;
+  margin-left: 8px;
+}
+
+.funding__item__subname {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #c0c0c0;
+  margin-left: 8px;
+}
+
+.chart__image {
+  padding: 10px;
+}
+
+.chart__image img {
+  width: 100%;
+}
+
+.chart__assets {
+  padding: 64px 25px 40px 40px;
+}
+
+.chart__assets__row {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #1e1d1d;
+}
+
+.funding__items__content--left,
+.funding__items__content--right {
+  background: rgba(0, 0, 0, 0.56);
+  border-radius: 30px;
+}
+
+.chart__assets__icons {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.chart__assets__icon {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-bottom: 1px solid #1e1d1d;
+}
+
+.chart__assets__icon img {
+  width: 25px;
+  height: 25px;
+}
+
+.funding__items {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+}
+
+.funding__item {
+  display: flex;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+  width: 100%;
+}
+
+.chart__assets__row--header .funding__item {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.funding__items__title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: 120px;
+}
