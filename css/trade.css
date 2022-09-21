@@ -50,10 +50,6 @@ body.page-trade {
   margin-bottom: 50px;
 }
 
-.trade__market__content--right {
-  margin-top: 130px;
-}
-
 /* MARKET PLACE WITH ASSETS*/
 
 .trade__market__header {
@@ -61,12 +57,11 @@ body.page-trade {
   font-size: 30px;
   line-height: 36px;
   color: rgba(242, 240, 255, 0.88);
-  margin-top: 66px;
-  margin-bottom: 12px;
 }
 
 .chart__image img {
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .chart__assets__content {
@@ -206,7 +201,7 @@ body.page-trade {
 
 .order__container {
   border: 1.5px solid #252439;
-  border-radius: 30px;
+  border-radius: 15px;
   padding: 8px 12px;
 }
 
@@ -405,5 +400,5 @@ body.page-trade {
 }
 
 .trade__market__top {
-  margin-bottom: 5px;
+  margin: 12px;
 }

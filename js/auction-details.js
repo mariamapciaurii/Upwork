@@ -320,14 +320,11 @@ $(document).ready(function () {
 
 var scrollableContainer = document.querySelector(".auctions-details__content");
 
-console.log("scrollingBlocks", scrollingBlocks);
-
 // create a simple instance
 // by default, it only adds horizontal recognizers
 var hammerSwipe = new Hammer(scrollableContainer);
 
 if (isMobile) {
-  console.log("avoe bozoooo");
 
   hammerSwipe.get("swipe").set({
     direction: Hammer.DIRECTION_ALL,

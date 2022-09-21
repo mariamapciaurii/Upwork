@@ -126,6 +126,21 @@ let priceChart = [{
   },
 ];
 
+let itemInfo = [{
+    image: "assets/tesla.png",
+    name: "TSLA",
+    num: "82",
+    amount: "842.70",
+    percentage: "18.24(2.21%)",
+    calculate: " 830.1x25",
+    range: "818",
+    volume: "28.241M",
+    avarage: "29.04M",
+    market: "83.7M",
+  },
+
+];
+
 function renderMarket() {
   let marketScrollableContainer = $(".trade__assets__items");
   let marketFixedContainer = $(".assets__items__fixed");
@@ -269,11 +284,11 @@ function renderPrice() {
     } else {
       let dataElement = `
             <div class="price-chart__data">                 
-                <div> 
+                <div class="price-chart__data__value"> 
                     ${priceChart[i].price}                                         
                 </div>
 
-                <div>  
+                <div class="price-chart__data__value">  
                     ${priceChart[i].quantity}
                 </div>        
                 
@@ -287,8 +302,110 @@ function renderPrice() {
   }
 }
 
-function renderInfo(){
+function renderInfo() {
+  let test = $(".trade-details__section--middle");
 
+  for (let i = 0; i < itemInfo.length; i++) {
+
+    test.append(`<div class="info">
+
+                    <div class="info__header">
+
+                      <div class="info__header__image">
+                        <img src="${itemInfo[i].image}" />       
+                      </div>
+
+                      <div class="info__header__name">
+                        ${itemInfo[i].name}                    
+                      </div>
+
+                      <div class="info__header__num">
+                        ${itemInfo[i].num}                    
+                                        
+                      </div>
+
+                      <div class="info__header__icon">
+                        <img src="./assets/more.svg" alt="logo" />                                     
+                      </div>
+
+                    </div>
+
+                    <div class="info__first-section">
+
+                      <div class="d-flex align-items-baseline mt-2">
+
+                        <div class="info__amount pe-2">
+                          ${itemInfo[i].amount}
+                        </div>
+
+                        <div class="info__currency"> USD</div>    
+
+                      </div>
+
+                      <div class="info__percentage mb-4"> ${itemInfo[i].percentage} </div>
+              
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center p-3">
+
+                      <div class="info__calculate info__calculate--blue">
+                        ${itemInfo[i].calculate}
+                      </div>
+
+                      <div class="info__calculate info__calculate--red">
+                        ${itemInfo[i].calculate}                
+                      </div>
+                    
+                    </div>
+
+                    <div class="info__range">
+
+                      <div class="info__range__days row align-items-center">
+                        <div class="col-4 info__range__num"> ${itemInfo[i].range} </div>
+                        <div class="col-4 info__range__text">DAY'S RANGE</div>
+                        <div class="col-4 info__range__num"> ${itemInfo[i].range} </div>                 
+                      </div>
+
+                      <div class="info__range__week row align-items-center">
+                        <div class="col-4 info__range__num"> ${itemInfo[i].range} </div>
+                        <div class="col-4 info__range__text">52WK RANGE</div>
+                        <div class="col-4 info__range__num"> ${itemInfo[i].range} </div>                 
+                      </div>
+
+                    </div>
+
+                    <div class="info__stats">
+                      <div class="info__stats__title">Key stats</div>
+
+                      <div class="d-flex align-items-center justify-content-between pb-2">
+                        <div class="info__stats__data info__stats__data--left">VOLUME</div>
+                        <div class="info__stats__data info__stats__data--right"> ${itemInfo[i].volume} </div>
+                      </div>
+
+                      <div class="d-flex  justify-content-between pb-2">
+                        <div class="info__stats__data info__stats__data--left">AVARAGE VOLUME</div>
+                        <div class="info__stats__data info__stats__data--right"> ${itemInfo[i].avarage} </div>
+                      </div>
+
+                      <div class="d-flex  justify-content-between pb-2">
+                        <div class="info__stats__data info__stats__data--left">MARKET CAPITALIZATION</div>
+                        <div class="info__stats__data info__stats__data--right"> ${itemInfo[i].market} </div>
+                      </div>
+
+                      <div class="d-flex  justify-content-between pb-2">
+                        <div class="info__stats__data info__stats__data--left">DIVIDENTS</div>
+                        <div class="info__stats__data info__stats__data--right"> - </div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="info__earnings">
+                      <div class="info__earnings__title">Earnings Next: Oct 19</div>
+
+                    </div>
+              </div>                 
+    `);
+  }
 }
 
 function rendomPercentage() {
@@ -308,12 +425,9 @@ function renderSwiper() {
       switch (event.type) {
         case "swipeleft":
           scrollableContainer.style.transform = "translateX(-104%)";
-
-          console.log("left");
           break;
         case "swiperight":
           scrollableContainer.style.transform = "translateX(0)";
-          console.log("right");
           break;
       }
     });

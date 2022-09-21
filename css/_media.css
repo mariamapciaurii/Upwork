@@ -1,11 +1,17 @@
-/* // Mobile Works Up 768 (tablets, 768px and up) */
-@media (max-width: 768px) {
-  .trade__market__content--right {
-    margin-top: 0px;
+/* Large devices (desktops, 992px and up) */
+
+@media (max-width: 1200px) {
+  .portfolio__section--left__value {
+    font-size: 22px;
+  }
+
+  .week-chart {
+    font-size: 10px;
   }
 }
 
 /* Mobile Works Under 767.98p  */
+
 @media (max-width: 767.98px) {
   body.page-auctions {
     padding-right: 0;
@@ -17,12 +23,6 @@
   }
 
   /* HEADER MOBILE */
-
-  .header {
-    /* position: sticky; */
-    /* top: 0; */
-    /* z-index: 999; */
-  }
 
   .header__left {
     flex-direction: column;
@@ -311,5 +311,17 @@
 
   .trade__market__top {
     margin-bottom: 40px;
+  }
+
+  .portfolio__section--left__value {
+    font-size: 18px;
+  }
+
+  .week-chart {
+    padding: 3px;
+  }
+
+  .cashflow {
+    margin-top: 29px;
   }
 }

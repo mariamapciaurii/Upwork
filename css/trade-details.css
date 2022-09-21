@@ -26,7 +26,7 @@
 
 .order__container {
   border: 1.5px solid #252439;
-  border-radius: 30px;
+  border-radius: 15px;
   padding: 8px 12px;
 }
 
@@ -233,12 +233,16 @@
 
 .price-chart__data-percentage {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   background: #432532;
+}
+
+.price-chart__data__value {
+  z-index: 2;
 }
 
 .price-chart__spread~.price-chart__data .price-chart__data-percentage {
@@ -292,8 +296,6 @@
   font-size: 30px;
   line-height: 36px;
   color: rgba(242, 240, 255, 0.88);
-  margin-top: 86px;
-  margin-bottom: 12px;
 }
 
 .chart__image img {
@@ -422,5 +424,120 @@
 }
 
 .market__item--green {
-  color: #16c784;
+  color: #438A7A;
+}
+
+
+/* TRADE DETAILS MIDDLE SIDE [INFO]  */
+
+.info {
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 545px;
+}
+
+.info__header {
+  display: flex;
+  align-items: center;
+}
+
+.info__header__image img {
+  width: 24px;
+}
+
+.info__header__name {
+  text-transform: uppercase;
+  color: #AAACB2;
+  font-weight: 600;
+  padding-left: 5px;
+  padding-right: 22px;
+  font-size: 14px;
+}
+
+.info__header__icon img {
+  width: 20px;
+}
+
+.info__header__num {
+  color: #AAACB2;
+  border: 1px solid #AAACB2;
+  border-radius: 6px;
+  padding: 2px 4px;
+  margin-right: 12px;
+  font-size: 14px;
+}
+
+.info__amount {
+  color: #AAACB2;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.info__currency {
+  color: #AAACB2;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.trade-details__section--middle {
+  padding: 8px;
+}
+
+.info__percentage {
+  color: #438A7A;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.info__calculate {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.info__calculate--blue {
+  color: #3862F6;
+}
+
+.info__calculate--red {
+  color: #DF484C;
+}
+
+.info__range__num {
+  color: #AAACB2;
+  font-size: 13px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.info__range__text {
+  color: #74767C;
+  font-size: 13px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.info__stats__title,
+.info__earnings__title {
+  color: #AAACB2;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-top: 29px;
+  margin-bottom: 12px;
+}
+
+.info__stats__data--right {
+  color: #AAACB2;
+  font-size: 13px;
+}
+
+.info__stats__data--left {
+  color: #494B52;
+  font-size: 13px;
+  text-transform: uppercase;
 }

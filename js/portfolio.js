@@ -310,16 +310,19 @@ function renderContract() {
                                 <div class="col-6">
 
                                   <div class="d-flex pt-2">
+
                                     <div class="contracts__item__image d-flex justify-content-center align-items-center p-2">
                                       <img src="${contractContent[i].image}" alt=""/>                                 
                                     </div>
 
                                     <div class="d-flex flex-column">
+
                                       <div class="contracts__item__name">
                                         ${contractContent[i].name}                                 
                                       </div>
 
                                       <div class="d-flex contracts__item__component">
+
                                         <div class="pe-3">
                                           ${contractContent[i].subName}                      
                                         </div>
@@ -327,13 +330,17 @@ function renderContract() {
                                         <div>
                                           ${contractContent[i].days}                                       
                                         </div>
+
                                       </div> 
                                       
-                                    </div>                                                       
+                                    </div>  
+
                                   </div>
 
                                   <div class="p-2 py-1">
+
                                     <div class="d-flex justify-content-between align-items-center">
+
                                       <div class="contracts__numbers pb-1">
                                         ${contractContent[i].transaction}
                                       </div>
@@ -345,6 +352,7 @@ function renderContract() {
                                     </div>
                                                     
                                     <div class="d-flex justify-content-between align-items-center">
+
                                       <div class="contracts__numbers">
                                         ${contractContent[i].volume}                      
                                       </div>
@@ -352,29 +360,39 @@ function renderContract() {
                                       <div class="contracts__text">
                                         Monthly Volume                                             
                                       </div>
+                                      
                                     </div>
+
                                   </div>
+                                  
                                 </div>
 
                                 <div class="border-line"></div>
-                                
+                                                          
                                 <div class="contract__chart col-6">
-                                  <div class="p-2 px-3">
+
+                                  <div class="p-2">
+
                                     <img src="${contractContent[i].chart}" alt=""/> 
                                   
                                   </div>
 
                                   <div class="d-flex align-items-center justify-content-between p-2 px-3">
+
                                     <div class="contract__revenue__title">
                                       Total Revenue
                                     </div>
+                                    
                                     <div class="contract__revenue__value">
                                       ${contractContent[i].revenue}                      
                                     </div>
-                                  </div>                
+
+                                  </div>    
+
                                 </div>   
 
-                              </div>    
+                              </div>  
+
                             </div>`);
   }
 }
