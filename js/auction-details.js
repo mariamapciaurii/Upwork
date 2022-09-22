@@ -1,7 +1,6 @@
 "use strict";
 
-let auctionsDetails = [
-  {
+let auctionsDetails = [{
     name: "Bitcoin",
     shortName: "BTC",
     contentImage: "assets/btc.png",
@@ -23,21 +22,17 @@ let auctionsDetails = [
     MonthCashflow: "5 , 000",
     percentage: "%",
     usd: "USD",
-  },
-];
+}, ];
 
-let marketCup = [
-  {
+let marketCup = [{
     marketCupName: "Market Cap",
     infoIcon: "assets/info.svg",
     marketCupNum: "$ 405,659,707.515",
     greenStatIcon: "",
     statValue: "0.22%",
-  },
-];
+}, ];
 
-let volume = [
-  {
+let volume = [{
     volumeName: "Volume",
     infoIcon: "assets/info.svg",
     hours: "24h",
@@ -45,11 +40,9 @@ let volume = [
     redStatIcon: "",
     statValue: "33.56%",
     volumeAverage: "0.6493",
-  },
-];
+}, ];
 
-let supply = [
-  {
+let supply = [{
     supplyName: "Circulating Supply",
     infoIcon: "assets/info.svg",
     approvedIcon: "assets/approved.svg",
@@ -60,15 +53,14 @@ let supply = [
     maxSupplyNum: "21,000,000",
     totalSupplyName: "Total Supply",
     totalSupplyNum: "19,127,368",
-  },
-];
+}, ];
 
 function generateAuctionInternalPage() {
-  let auctionInternalDiv = $(".auctions-details__content");
+    let auctionInternalDiv = $(".auctions-details__content");
 
-  for (let i = 0; i < auctionsDetails.length; i++) {
-    auctionInternalDiv.append(`<div class="row">                                
-                                    <div class="scrolling-block col-12 col-lg-5 mb-5">
+    for (let i = 0; i < auctionsDetails.length; i++) {
+        auctionInternalDiv.append(`<div class="row">                                
+                                    <div class="scrolling-block col-12 col-lg-5 col-xl-4 mb-5">
 
                                         <div class="auctions-details__left">
 
@@ -88,9 +80,97 @@ function generateAuctionInternalPage() {
                                             </div>
 
                                             <div class="bid-button-wrapper">
-                                                <div class="bid-button d-flex align-items-center justify-content-center">
-                                                    Bid
+                                                                                          
+                                                <input class="bid-button d-flex align-items-center justify-content-center "btn btn-info btn-lg" type="button" value="Bid" data-toggle="modal" data-target="#myModal">
+                                                                                                                             
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="myModal" role="dialog">
+                                                    <div class="modal-dialog">
+                                                    
+                                                        <!-- Modal content-->
+                                                
+                                                        <div class="modal-content">
+
+                                                            <div class="modal-body__main">
+
+                                                                <div class="modal-header">
+
+                                                                    <h4 class="modal-title">Bid</h4>
+
+                                                                </div>
+
+                                                                <div class="modal-body">
+                                                                    <div class="modal__input">
+                                                                        <input type="text" value="10.000" >
+                                                                        <div class="modal__input__usd">USD</div>
+                                                                    </div>
+
+                                                                    <div class="modal-body__content">
+                                                                        <div>Fee</div>
+
+                                                                        <div>
+                                                                           $ ${auctionsDetails[i].Fee}                                                                  
+                                                                        </div>                                                      
+                                                                    </div>
+   
+                                                                    <div class="modal-body__content">
+                                                                        <div>owvnership</div>
+
+                                                                        <div>
+                                                                            ${auctionsDetails[i].Ownership} %                                                                  
+                                                                        </div>                                                      
+                                                                    </div>
+
+                                                                    <div class="modal-body__content">
+                                                                        <div>Comision/Trade</div>
+
+                                                                        <div>
+                                                                            ${auctionsDetails[i].Commission} %                                    
+                                                                        </div>                                                      
+                                                                    </div>
+
+                                                                    <div class="bid-button-wrapper modal-body__submit">
+                                                                        <input class="bid-button" type="submit" value="Submit" >                                                            
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="modal-footer">
+                                                                    <div>Highest bid:</div>
+
+                                                                    <div>
+                                                                         ${auctionsDetails[i].highestBid}                                                                                                                                                                                                                                     
+                                                                    </div>
+                                                                </div>
+                                                         
+                                                            </div>
+
+                                                            <div class="modal-body__success">
+                                              
+                                                                <div class="check-container">
+
+                                                                    <div class="check-background">
+                                                                        <img src="./assets/success.svg" alt="logo" />                                                                                                     
+                                                                    </div>
+
+                                                                    <div class="check-container__title">
+                                                                        Your bid was submitted
+                                                                    </div>
+
+                                                                    <div class="check-container__paragraph">
+                                                                        To change your bid, you can submit a new bid and the old one would be automatically cancelled.
+                                                                    </div>
+                                                
+                                                                </div>
+                                                              
+                                                            </div>
+
+                                                        </div>
+                                                        
+                                                    </div>
+                                                                    
                                                 </div>
+                                                                                                              
                                             </div>
                                     
                                             <div class="auctions-details__footer">
@@ -122,7 +202,7 @@ function generateAuctionInternalPage() {
                                         </div>
                                     </div>
                          
-                                    <div class="scrolling-block col-12 col-lg-7">
+                                    <div class="scrolling-block col-12 col-lg-7 col-xl-8">
                                         <div class="auctions-details__right">
 
                                             <div class="auctions-details__chart">
@@ -185,6 +265,7 @@ function generateAuctionInternalPage() {
                                             </div>
 
                                             <div class="auctions-details__info">
+                                            
                                                 <div class="row">
 
                                                     <div class="col-xl-4 col-6 auctions-details__info__market">
@@ -245,7 +326,7 @@ function generateAuctionInternalPage() {
                                                     
                                                     </div>
 
-                                                    <div class="col-xl-4 col-sm-5 col-8 mt-4 mt-sm-0 auctions-details__info__supply">
+                                                    <div class="col-xl-4 col-8 mt-4 mt-sm-0 auctions-details__info__supply">
                                                         <div class="d-flex mb-2">
 
                                                             <div class="auctions-details__info__title">
@@ -305,17 +386,46 @@ function generateAuctionInternalPage() {
                                         </div>
                                     </div>   
                                 </div>`);
-  }
+    }
+}
+
+function modalPages() {
+    $(".modal-body__success").hide();
+
+    $(".modal-body__submit").click(function () {
+        // Then show div on click.
+        $(".modal-body__main").hide();
+        $(".modal-body__success").show();
+    });
+
+    let template = null;
+
+    $('.modal').on('show.bs.modal', function (event) {
+        template = $(this).html();
+    });
+
+    $('.modal').on('hidden.bs.modal', function (e) {
+        $(this).html(template);
+
+        $(".modal-body__submit").click(function () {
+            // Then show div on click.
+            $(".modal-body__main").hide();
+            $(".modal-body__success").show();
+        });
+    });
+
 }
 
 var scrollingBlocks;
 var swipeIcon;
 
 $(document).ready(function () {
-  generateAuctionInternalPage();
+    generateAuctionInternalPage();
+    modalPages();
 
-  scrollingBlocks = document.querySelectorAll(".scrolling-block");
-  swipeIcon = document.querySelector(".auctions-details__swipe-icon");
+    scrollingBlocks = document.querySelectorAll(".scrolling-block");
+    swipeIcon = document.querySelector(".auctions-details__swipe-icon");
+
 });
 
 var scrollableContainer = document.querySelector(".auctions-details__content");
@@ -326,29 +436,29 @@ var hammerSwipe = new Hammer(scrollableContainer);
 
 if (isMobile) {
 
-  hammerSwipe.get("swipe").set({
-    direction: Hammer.DIRECTION_ALL,
-    threshold: 1,
-    velocity: 0.1,
-  });
+    hammerSwipe.get("swipe").set({
+        direction: Hammer.DIRECTION_ALL,
+        threshold: 1,
+        velocity: 0.1,
+    });
 
-  hammerSwipe.on("swipeup swipedown", (event) => {
-    switch (event.type) {
-      case "swipeup":
-        scrollingBlocks[0].style.transform = "translateY(-100%)";
-        scrollingBlocks[1].style.transform = "translateY(0)";
+    hammerSwipe.on("swipeup swipedown", (event) => {
+        switch (event.type) {
+            case "swipeup":
+                scrollingBlocks[0].style.transform = "translateY(-100%)";
+                scrollingBlocks[1].style.transform = "translateY(0)";
 
-        swipeIcon.classList.add("active");
+                swipeIcon.classList.add("active");
 
-        break;
-        
-      case "swipedown":
-        scrollingBlocks[0].style.transform = "translateY(0)";
-        scrollingBlocks[1].style.transform = "translateY(100%)";
+                break;
 
-        swipeIcon.classList.remove("active");
+            case "swipedown":
+                scrollingBlocks[0].style.transform = "translateY(0)";
+                scrollingBlocks[1].style.transform = "translateY(100%)";
 
-        break;
-    }
-  });
+                swipeIcon.classList.remove("active");
+
+                break;
+        }
+    });
 }

@@ -115,8 +115,6 @@
   top: 50%;
   transform: translateY(-50%);
   left: 8px;
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
@@ -126,8 +124,6 @@
 }
 
 .order__input__specifier {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 300;
   font-size: 15px;
   line-height: 18px;
