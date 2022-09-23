@@ -310,7 +310,7 @@ function generateAuctionInternalPage() {
                                                             ${volume[i].statValue} 
                                                         </div>
 
-                                                        <div class="d-flex mt-4">
+                                                        <div class="d-flex mt-2 mt-md-4">
                                                             <div class="auctions-details__info__title">
                                                                 ${marketCup[i].marketCupName} /
                                                             </div>
@@ -425,6 +425,7 @@ $(document).ready(function () {
 
     scrollingBlocks = document.querySelectorAll(".scrolling-block");
     swipeIcon = document.querySelector(".auctions-details__swipe-icon");
+    detailsImage = document.querySelector(".auctions-details__swipe-icon");
 
 });
 
@@ -445,9 +446,8 @@ if (isMobile) {
     hammerSwipe.on("swipeup swipedown", (event) => {
         switch (event.type) {
             case "swipeup":
-                scrollingBlocks[0].style.transform = "translateY(-100%)";
-                scrollingBlocks[1].style.transform = "translateY(0)";
-
+                scrollingBlocks[0].style.transform = "translateY(-18%)";
+                scrollingBlocks[1].style.transform = "translateY(26%)";
                 swipeIcon.classList.add("active");
 
                 break;
@@ -461,4 +461,23 @@ if (isMobile) {
                 break;
         }
     });
+
+    // hammerSwipe.on("swipeup swipedown", (event) => {
+    //     switch (event.type) {
+    //         case "swipeup":
+
+    //             let img = $(".auctions-details__image");
+
+    //             $(img).css( "width", "59px" );
+    //             $(img).css( "height", "67px" );
+
+    //             break;
+
+    //         case "swipedown":
+
+    //             $(img).css( "width", "85px" );
+    //             $(img).css( "height", "97px" );
+    //             break;
+    //     }
+    // });
 }

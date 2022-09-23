@@ -6,7 +6,7 @@
   }
 
   .week-chart {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 
@@ -132,7 +132,7 @@
   }
 
   .auctions-details__right {
-    padding: 14px 27px 14px 27px;
+    padding: 4px 17px 14px 17px;
   }
 
   /* AUCTIONS DETAILS MOBILE */
@@ -143,8 +143,16 @@
   }
 
   .auctions-details__image {
-    width: 85px;
-    height: 97px;
+    width: 75px;
+    height: 87px;
+    margin-bottom: 0;
+  }
+
+ 
+  .auctions-details__info__market img, 
+  .auctions-details__info__volume img,
+  .auctions-details__info__supply img{
+    width: 24px;
   }
 
   .auctions-details__name {
@@ -170,6 +178,11 @@
   .auctions-details__info__neg-value {
     font-size: 12px;
   }
+
+  .auctions-details__list__item {
+    margin-bottom: 5px;
+  }
+
 
   /* FUNDING MOBILE */
   .funding__container {
@@ -251,6 +264,7 @@
   }
 
   /* TRADE */
+
   .trade__market__header {
     margin-top: 12px;
     font-weight: 500;
@@ -314,7 +328,7 @@
   }
 
   .portfolio__section--left__value {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .week-chart {
@@ -323,5 +337,68 @@
 
   .cashflow {
     margin-top: 29px;
+  }
+
+  .portfolio__section--left__title {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+  }
+
+  .portfolio__section__top {
+    background: rgba(18, 16, 23, 0.8);
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: #262345;
+    border-radius: 15px;
+    padding: 11px 15px;
+  }
+
+  .weeks div:not(:first-child) {
+    padding: 0 7px;
+  }
+
+  .portfolio__chart {
+    padding: 24px 35px;
+    margin-bottom: 35px;
+  }
+
+  .portfolio__container {
+    margin-top: 20px;
+  }
+
+  .portfolio__assets__icons {
+    width: 65px;
+  }
+
+  .assets__item {
+    font-size: 14px !important;
+  }
+
+  .portfolio__assets__items {
+    min-width: 673px;
+  }
+
+  .cashflow__title {
+    font-size: 18px;
+  }
+
+  .cashflow__value {
+    font-size: 14px;
+    padding-top: 6px;
+  }
+
+  .contracts__item__name {
+    font-size: 16px;
+  }
+
+  .contracts__numbers,
+  .contract__revenue__value {
+    font-size: 12px;
+  }
+
+  .contracts__text,
+  .contract__revenue__title {
+    font-size: 10px;
   }
 }

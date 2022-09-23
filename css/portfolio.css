@@ -280,7 +280,6 @@
   height: 0px;
   left: 237px;
   top: 29px;
-
   border: 1px solid #6B6E7D;
   transform: rotate(90deg);
 }
@@ -329,3 +328,55 @@
   font-size: 35px;
   line-height: 42px;
 }
+
+.page-portfolio {
+  /* overflow: hidden;
+  height: 100%; */
+}
+
+.portfolio__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(12, 12, 12, 0.89);
+  height: 47px;
+  width: 100%;
+}
+
+.portfolio__button {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #FFFFFF;
+  padding: 5px 8px;
+}
+
+.portfolio__button--crypto {
+  margin-right: 22px;
+}
+
+.portfolio__button.selected {
+  border-radius: 5px;
+  border: 1.5px solid #483aa9;
+}
+
+/* 
+.portfolio {
+  height: calc(100% - 241px);
+} 
+
+ .portfolio .container {
+  height: 100%;
+}
+
+.portfolio__container {
+  height: 100%;
+}
+
+.portfolio__container .row {
+  height: 100%;
+}
+
+.portfolio__section--left {
+  height: 100%;
+} */

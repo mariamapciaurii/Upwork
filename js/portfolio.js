@@ -264,7 +264,6 @@ function renderChart() {
   for (let i = 0; i < fundingContent.items.length; i++) {
     chartIconsContainer.append(`<div class="portfolio__assets__icon">
         <img src="${fundingContent.items[i].image}" alt="${fundingContent.items[i].name}"/>
-
     `);
   }
 }
@@ -334,7 +333,6 @@ function renderContract() {
                                       </div> 
                                       
                                     </div>  
-
                                   </div>
 
                                   <div class="p-2 py-1">
@@ -397,8 +395,63 @@ function renderContract() {
   }
 }
 
+
+function portfolioButtons() {
+
+  if (isMobile) {
+    $(".portfolio__section--left").show();
+    $(".portfolio--right").hide();
+
+    $(".portfolio__button--crypto").click(function () {
+      // Then show div on click.
+      $(".portfolio--right").hide();
+      $(".portfolio__section--left").show();
+    });
+
+    $(".portfolio__button--contract").click(function () {
+      // Then show div on click.
+      $(".portfolio--right").show();
+      $(".portfolio__section--left").hide();
+    });
+
+    $(".portfolio__button--crypto").addClass("selected");
+
+    $(".portfolio__button--contract").on("click", function () {
+      //then remove and add selected class.
+      $(".portfolio__button--crypto").removeClass("selected");
+      $(this).addClass("selected");
+    });
+
+    $(".portfolio__button--crypto").on("click", function () {
+      //then remove selected class.
+      $(".portfolio__button--contract").removeClass("selected");
+      $(this).addClass("selected");
+    });
+  }
+}
+
+
+
 $(document).ready(function () {
   renderChart();
   renderCashflow();
   renderContract();
+  portfolioButtons();
+
+  // let scrollableContainer = $(".contracts");
+  // let chartContaienr = $(".cashflow");
+
+  // if (isMobile) {
+  //   scrollableContainer.scroll(function () {
+  //     let scrollTop = this.scrollTop;
+
+  //     if (scrollTop > 0) {
+  //       chartContaienr.slideUp();
+  //     }
+
+  //     if (scrollTop === 0) {
+  //       chartContaienr.slideDown();
+  //     }
+  //   });
+  // }
 });
