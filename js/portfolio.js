@@ -2,7 +2,8 @@
 
 let fundingContent = {
   chartImage: "assets/portfolio-chart.png",
-  items: [{
+  items: [
+    {
       image: "assets/btc-fund.png",
       name: "Bitcoin",
       subName: "BCT",
@@ -113,58 +114,58 @@ let fundingContent = {
       allocation: "100",
       pl: "100",
     },
-
   ],
 };
 
-let cashflow = [{
-  image: "assets/cashflow-chart.png",
-  value: "$ 10 , 000",
-}, ];
-
-let contractContent = [{
-    chart: "assets/contract-chart.png",
-    image: "assets/cotract-image.png",
-    name: "Etherium",
-    subName: "ETH",
-    days: "26 days",
-    transaction: "0.04",
-    volume: "10,000",
-    revenue: "$ 150.59",
-  },
+let cashflow = [
   {
-    chart: "assets/contract-chart.png",
-    image: "assets/cotract-image.png",
-    name: "Etherium",
-    subName: "ETH",
-    days: "26 days",
-    transaction: "0.04",
-    volume: "10,000",
-    revenue: "$ 150.59",
+    image: "assets/cashflow-chart.png",
+    value: "$ 10 , 000",
   },
-  {
-    chart: "assets/contract-chart.png",
-    image: "assets/cotract-image.png",
-    name: "Etherium",
-    subName: "ETH",
-    days: "26 days",
-    transaction: "0.04",
-    volume: "10,000",
-    revenue: "$ 150.59",
-  },
-  {
-    chart: "assets/contract-chart.png",
-    image: "assets/cotract-image.png",
-    name: "Etherium",
-    subName: "ETH",
-    days: "26 days",
-    transaction: "0.04",
-    volume: "10,000",
-    revenue: "$ 150.59",
-  },
-
 ];
 
+let contractContent = [
+  {
+    chart: "assets/contract-chart.png",
+    image: "assets/cotract-image.png",
+    name: "Etherium",
+    subName: "ETH",
+    days: "26 days",
+    transaction: "0.04",
+    volume: "10,000",
+    revenue: "$ 150.59",
+  },
+  {
+    chart: "assets/contract-chart.png",
+    image: "assets/cotract-image.png",
+    name: "Etherium",
+    subName: "ETH",
+    days: "26 days",
+    transaction: "0.04",
+    volume: "10,000",
+    revenue: "$ 150.59",
+  },
+  {
+    chart: "assets/contract-chart.png",
+    image: "assets/cotract-image.png",
+    name: "Etherium",
+    subName: "ETH",
+    days: "26 days",
+    transaction: "0.04",
+    volume: "10,000",
+    revenue: "$ 150.59",
+  },
+  {
+    chart: "assets/contract-chart.png",
+    image: "assets/cotract-image.png",
+    name: "Etherium",
+    subName: "ETH",
+    days: "26 days",
+    transaction: "0.04",
+    volume: "10,000",
+    revenue: "$ 150.59",
+  },
+];
 
 function renderChart() {
   let chartAssetsContainer = $(".portfolio__assets__items");
@@ -395,42 +396,34 @@ function renderContract() {
   }
 }
 
-
 function portfolioButtons() {
-
   if (isMobile) {
     $(".portfolio__section--left").show();
     $(".portfolio--right").hide();
+
+    $(".portfolio__button--crypto").addClass("selected");
 
     $(".portfolio__button--crypto").click(function () {
       // Then show div on click.
       $(".portfolio--right").hide();
       $(".portfolio__section--left").show();
+
+      //then remove selected class.
+      $(".portfolio__button--contract").removeClass("selected");
+      $(this).addClass("selected");
     });
 
     $(".portfolio__button--contract").click(function () {
       // Then show div on click.
       $(".portfolio--right").show();
       $(".portfolio__section--left").hide();
-    });
 
-    $(".portfolio__button--crypto").addClass("selected");
-
-    $(".portfolio__button--contract").on("click", function () {
       //then remove and add selected class.
       $(".portfolio__button--crypto").removeClass("selected");
       $(this).addClass("selected");
     });
-
-    $(".portfolio__button--crypto").on("click", function () {
-      //then remove selected class.
-      $(".portfolio__button--contract").removeClass("selected");
-      $(this).addClass("selected");
-    });
   }
 }
-
-
 
 $(document).ready(function () {
   renderChart();
@@ -438,20 +431,24 @@ $(document).ready(function () {
   renderContract();
   portfolioButtons();
 
-  // let scrollableContainer = $(".contracts");
-  // let chartContaienr = $(".cashflow");
+  let scrollableContainer = $(".contracts__container");
+  let chartContaienr = $(".cashflow");
 
-  // if (isMobile) {
-  //   scrollableContainer.scroll(function () {
-  //     let scrollTop = this.scrollTop;
+  if (isMobile) {
+    scrollableContainer.scroll(function () {
+      console.log("avoex");
 
-  //     if (scrollTop > 0) {
-  //       chartContaienr.slideUp();
-  //     }
+      let scrollTop = this.scrollTop;
 
-  //     if (scrollTop === 0) {
-  //       chartContaienr.slideDown();
-  //     }
-  //   });
-  // }
+      if (scrollTop > 0) {
+        chartContaienr.slideUp();
+        // $(".contracts").addClass("contracts--full");
+      }
+
+      if (scrollTop === 0) {
+        chartContaienr.slideDown();
+        // $(".contracts").removeClass("contracts--full");
+      }
+    });
+  }
 });

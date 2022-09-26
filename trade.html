@@ -21,7 +21,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
     <link rel="stylesheet" href="css/_media.css">
-    
+
 </head>
 
 <body class="page-trade">
@@ -165,12 +165,13 @@
                                     <div class="order__input__specifier">AAPL</div>
                                 </div>
 
-                                <div class="order__input">
-
-                                    <input type="text" placeholder=" " />
-                                    <label class="order__input__label">Duration</label>
-
-                                    <div class="order__input__specifier">GOOD TILL CANCEL</div>
+                                <div class="selectdiv ">
+                                    <select class="form-select order__input" aria-label="Default select example">
+                                        <option selected>GOOD TILL CANCEL</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
                                 </div>
 
                                 <div class="order__form__border">
@@ -198,13 +199,12 @@
 
                 </div>
             </div>
-
-            <div class="px-5 mx-4">
-                <div class="order__tab order__tab--green d-flex d-sm-none">
-                    <div>Buy</div>
-                    <div>Sell</div>
-                </div>
+       
+            <div class="d-flex d-sm-none trade__buttons">
+                <div class="trade__button trade__button--buy">Buy</div>
+                <div class="trade__button trade__button--sell">Sell</div>
             </div>
+            
         </div>
     </main>
 

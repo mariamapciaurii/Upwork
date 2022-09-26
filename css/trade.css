@@ -277,6 +277,7 @@ body.page-trade {
   height: 100%;
 }
 
+
 .order__input input:not(:placeholder-shown)+label {
   transform: translateY(-20px);
 }
@@ -290,8 +291,6 @@ body.page-trade {
   top: 50%;
   transform: translateY(-50%);
   left: 8px;
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
@@ -300,9 +299,51 @@ body.page-trade {
   transition: transform 200ms ease-in;
 }
 
+/* SELECT */
+
+.selectdiv {
+  position: relative;
+}
+
+.selectdiv:after {
+  content: url("../assets/arrow-down.svg");
+  color: #726a89;
+  right: 11px;
+  top: 7px;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* IE11 hide native button  */
+select::-ms-expand {
+  display: none;
+}
+
+select option {
+  color: black;
+}
+
+select:not(:checked) {
+  color: #FFFFFF;
+}
+
+.form-select {
+  border: none !important;
+  padding: 14px 8px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.form-select:focus {
+  border: none !important;
+  box-shadow: none;
+}
+
 .order__input__specifier {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 300;
   font-size: 15px;
   line-height: 18px;
@@ -401,4 +442,33 @@ body.page-trade {
 
 .trade__market__top {
   margin: 12px;
+}
+
+.trade__buttons {
+  align-items: center;
+  justify-content: center;
+  background: rgba(12, 12, 12, 0.89);
+  height: 65px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: env(safe-area-inset-bottom);
+}
+
+.trade__button {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #ffffff;
+  padding: 5px 8px;
+  padding: 7px 50px;
+  font-weight: 600;
+}
+
+.trade__button--buy {
+  margin-right: 22px;
+  border: 1.5px solid #4c8f5d;
+  border-radius: 5px;
+  color: #4c8f5d;
 }

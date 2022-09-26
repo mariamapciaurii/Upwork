@@ -148,10 +148,9 @@
     margin-bottom: 0;
   }
 
- 
-  .auctions-details__info__market img, 
+  .auctions-details__info__market img,
   .auctions-details__info__volume img,
-  .auctions-details__info__supply img{
+  .auctions-details__info__supply img {
     width: 24px;
   }
 
@@ -182,7 +181,6 @@
   .auctions-details__list__item {
     margin-bottom: 5px;
   }
-
 
   /* FUNDING MOBILE */
   .funding__container {
@@ -293,6 +291,10 @@
     font-size: 14px;
   }
 
+  .trade__market {
+    padding-bottom: 0px;
+  }
+
   .trade-details__container {
     position: relative;
     transition: transform 300ms ease-out 0s;
@@ -335,13 +337,16 @@
     padding: 3px;
   }
 
-  .cashflow {
-    margin-top: 29px;
+  /* .cashflow {
+    padding-top: 29px;
+  } */
+  .cashflow__chart img {
+    padding: 10px 35px;
   }
 
   .portfolio__section--left__title {
     font-size: 18px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 0;
   }
 
@@ -352,6 +357,7 @@
     border-color: #262345;
     border-radius: 15px;
     padding: 11px 15px;
+    height: 252px;
   }
 
   .weeks div:not(:first-child) {
@@ -364,7 +370,8 @@
   }
 
   .portfolio__container {
-    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 51px;
   }
 
   .portfolio__assets__icons {
@@ -400,5 +407,65 @@
   .contracts__text,
   .contract__revenue__title {
     font-size: 10px;
+  }
+
+  .portfolio__section--left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio__section--left>.row {
+    height: calc(100% - 252px);
+  }
+
+  .portfolio__section--left>.row>.col-12 {
+    height: 100%;
+  }
+
+  .portfolio--right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .contracts {
+    height: calc(100% - 238px);
+  }
+
+  .contracts__container {
+    height: 100%;
+  }
+
+  .portfolio {
+    height: calc(100% - 135px);
+  }
+
+  .portfolio__assets {
+    height: 100%;
+  }
+
+  .portfolio__buttons {
+    display: flex;
+  }
+
+  html.page-trade-details {
+    height: 100%;
+  }
+
+  .page-trade-details,
+  .trade-details__container {
+    height: 100%;
+  }
+
+  .trade-details {
+    height: calc(100% - 130px);
+  }
+
+  .trade-details .container {
+    height: 100%;
+  }
+
+  .trade-details__container .row {
+    height: 100%;
   }
 }

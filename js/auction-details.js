@@ -461,23 +461,4 @@ if (isMobile) {
                 break;
         }
     });
-
-    // hammerSwipe.on("swipeup swipedown", (event) => {
-    //     switch (event.type) {
-    //         case "swipeup":
-
-    //             let img = $(".auctions-details__image");
-
-    //             $(img).css( "width", "59px" );
-    //             $(img).css( "height", "67px" );
-
-    //             break;
-
-    //         case "swipedown":
-
-    //             $(img).css( "width", "85px" );
-    //             $(img).css( "height", "97px" );
-    //             break;
-    //     }
-    // });
 }
