@@ -393,5 +393,3 @@ if (isMobile) {
         }
     });
 }
-
-// listen to events...

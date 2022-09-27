@@ -418,17 +418,17 @@ function renderMarket() {
                            </div>`;
 
   let marketFixedHeader = `<div class="chart__assets__row chart__assets__row--header">
-                           <div class="market__items">
-                         
-                               <div class="market__item market__item--id">
-                                 #
-                               </div>
+                            <div class="market__items">
+                          
+                                <div class="market__item market__item--id">
+                                  #
+                                </div>
 
-                               <div class="market__item">
-                                   Name
-                               </div>     
+                                <div class="market__item">
+                                    Name
+                                </div>     
 
-                           </div>
+                            </div>
                       </div>`;
 
   marketScrollableContainer.append(marketScrolableHeader);

@@ -122,8 +122,6 @@
 .assets__item {
   display: flex;
   align-items: center;
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -133,8 +131,6 @@
 }
 
 .portfolio__assets__row--header .assets__item {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
@@ -331,11 +327,6 @@
   font-weight: 500;
   font-size: 35px;
   line-height: 42px;
-}
-
-.page-portfolio {
-  /* overflow: hidden;
-  height: 100%; */
 }
 
 .portfolio__buttons {

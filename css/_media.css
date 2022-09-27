@@ -429,7 +429,8 @@
   }
 
   .contracts {
-    height: calc(100% - 238px);
+    /* height: calc(100% - 238px); */
+    height: 100%;
   }
 
   .contracts__container {

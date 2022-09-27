@@ -277,7 +277,6 @@ body.page-trade {
   height: 100%;
 }
 
-
 .order__input input:not(:placeholder-shown)+label {
   transform: translateY(-20px);
 }

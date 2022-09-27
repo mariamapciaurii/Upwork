@@ -2,8 +2,7 @@
 
 let fundingContent = {
   chartImage: "assets/portfolio-chart.png",
-  items: [
-    {
+  items: [{
       image: "assets/btc-fund.png",
       name: "Bitcoin",
       subName: "BCT",
@@ -117,14 +116,21 @@ let fundingContent = {
   ],
 };
 
-let cashflow = [
-  {
-    image: "assets/cashflow-chart.png",
-    value: "$ 10 , 000",
-  },
-];
+let cashflow = [{
+  image: "assets/cashflow-chart.png",
+  value: "$ 10 , 000",
+}, ];
 
-let contractContent = [
+let contractContent = [{
+    chart: "assets/contract-chart.png",
+    image: "assets/cotract-image.png",
+    name: "Etherium",
+    subName: "ETH",
+    days: "26 days",
+    transaction: "0.04",
+    volume: "10,000",
+    revenue: "$ 150.59",
+  },
   {
     chart: "assets/contract-chart.png",
     image: "assets/cotract-image.png",
@@ -170,6 +176,7 @@ let contractContent = [
 function renderChart() {
   let chartAssetsContainer = $(".portfolio__assets__items");
   let chartImageContainer = $(".portfolio__chart");
+
   let chartImageSrc = fundingContent.chartImage;
   let chartImage = `<img src="${chartImageSrc}" alt="chartImage"/>`;
 
@@ -436,19 +443,17 @@ $(document).ready(function () {
 
   if (isMobile) {
     scrollableContainer.scroll(function () {
-      console.log("avoex");
 
       let scrollTop = this.scrollTop;
 
       if (scrollTop > 0) {
         chartContaienr.slideUp();
-        // $(".contracts").addClass("contracts--full");
       }
 
       if (scrollTop === 0) {
         chartContaienr.slideDown();
-        // $(".contracts").removeClass("contracts--full");
       }
     });
   }
+  
 });
