@@ -1,6 +1,7 @@
 "use strict";
 
-let auctionsDetails = [{
+let auctionsDetails = [
+  {
     name: "Bitcoin",
     shortName: "BTC",
     contentImage: "assets/btc.png",
@@ -22,17 +23,21 @@ let auctionsDetails = [{
     MonthCashflow: "5 , 000",
     percentage: "%",
     usd: "USD",
-}, ];
+  },
+];
 
-let marketCup = [{
+let marketCup = [
+  {
     marketCupName: "Market Cap",
     infoIcon: "assets/info.svg",
     marketCupNum: "$ 405,659,707.515",
     greenStatIcon: "",
     statValue: "0.22%",
-}, ];
+  },
+];
 
-let volume = [{
+let volume = [
+  {
     volumeName: "Volume",
     infoIcon: "assets/info.svg",
     hours: "24h",
@@ -40,9 +45,11 @@ let volume = [{
     redStatIcon: "",
     statValue: "33.56%",
     volumeAverage: "0.6493",
-}, ];
+  },
+];
 
-let supply = [{
+let supply = [
+  {
     supplyName: "Circulating Supply",
     infoIcon: "assets/info.svg",
     approvedIcon: "assets/approved.svg",
@@ -53,14 +60,15 @@ let supply = [{
     maxSupplyNum: "21,000,000",
     totalSupplyName: "Total Supply",
     totalSupplyNum: "19,127,368",
-}, ];
+  },
+];
 
 function generateAuctionInternalPage() {
-    let auctionInternalDiv = $(".auctions-details__content");
+  let auctionInternalDiv = $(".auctions-details__content");
 
-    for (let i = 0; i < auctionsDetails.length; i++) {
-        auctionInternalDiv.append(`<div class="row">                                
-                                    <div class="scrolling-block col-12 col-lg-5 col-xl-4 mb-5">
+  for (let i = 0; i < auctionsDetails.length; i++) {
+    auctionInternalDiv.append(`<div class="row">                                
+                                    <div class="scrolling-block col-12 col-lg-5 col-xl-4">
 
                                         <div class="auctions-details__left">
 
@@ -197,13 +205,10 @@ function generateAuctionInternalPage() {
                                     
                                         </div>
 
-                                        <div class="auctions-details__swipe-icon d-flex d-md-none">
-                                            <img src="./assets/swipe-icon.svg" alt="logo" />                                      
-                                        </div>
                                     </div>
                          
                                     <div class="scrolling-block col-12 col-lg-7 col-xl-8">
-                                        <div class="auctions-details__right">
+                                        <div class="auctions-details__right mt-0 mt-sm-5 mt-lg-0">
 
                                             <div class="auctions-details__chart">
                                                 <img src="${auctionsDetails[i].chart}" alt="chart" />
@@ -264,9 +269,9 @@ function generateAuctionInternalPage() {
 
                                             </div>
 
-                                            <div class="auctions-details__info">
+                                            <div class="auctions-details__info d-none d-md-flex">
                                             
-                                                <div class="row">
+                                                <div class="row w-100">
 
                                                     <div class="col-xl-4 col-6 auctions-details__info__market">
 
@@ -383,50 +388,172 @@ function generateAuctionInternalPage() {
                                                     </div>
                                                 </div>
                                             </div>
+                                            
+                                        
+                                            <div class="auctions-details__info d-flex d-md-none">
+                                            
+                                                <div class="row">
+
+                                                    <div class="col-6 auctions-details__info__market">
+
+                                                        <div class="d-flex mb-2">
+                                                            <div class="auctions-details__info__title">
+                                                                ${marketCup[i].marketCupName} 
+                                                            </div>
+                                                            <img class="px-2" src="${marketCup[i].infoIcon} " alt=""/>
+                                                        </div>
+
+                                                        <div class="auctions-details__info__value mb-2">
+                                                            ${marketCup[i].marketCupNum} 
+                                                        </div>
+
+                                                        <div class="auctions-details__info__pos-value">
+                                                            <span class="triangle pe-2"> &#9650 </span>
+                                                            ${marketCup[i].statValue} 
+                                                        </div>
+                                                                
+                                                    </div>
+
+                                                    <div class="col-6 auctions-details__info__volume">
+                                                        <div class="d-flex mb-2">
+                                                            <div class="auctions-details__info__title">
+                                                                ${volume[i].volumeName} 
+                                                            </div>
+
+                                                            <div class="auctions-details__info__hours mx-2 px-1">
+                                                                ${volume[i].hours} 
+                                                            </div>
+
+                                                            <img class="px-2" src="${volume[i].infoIcon} " alt=""/>
+                                                        </div>
+
+                                                        <div class="auctions-details__info__value mb-2">
+                                                            ${volume[i].marketCupNum} 
+                                                        </div>
+
+                                                        <div class="auctions-details__info__neg-value">
+                                                            <span class="triangle pe-2"> &#9660 </span>
+                                                            ${volume[i].statValue} 
+                                                        </div>                                                    
+                                                    </div>
+
+                                                    <div class="col-6 mt-sm-0 auctions-details__info__supply">
+                                                        <div class="d-flex mb-2">
+
+                                                            <div class="auctions-details__info__title">
+                                                                ${supply[i].supplyName} 
+                                                            </div>
+
+                                                            <img class="px-2" src="${supply[i].infoIcon} " alt=""/>
+                                                            <img class="approved-icon" src="${supply[i].approvedIcon} " alt=""/>
+                                                            
+                                                        </div>
+                               
+                                                        <div class="d-flex">
+                                                            <div class="auctions-details__info__value">
+                                                                ${supply[i].supplyNum}
+                                                            </div>
+
+                                                            <div class="auctions-details__info__value px-2">
+                                                                ${supply[i].shortName} 
+                                                            </div>
+
+                                                            <div class="auctions-details__info__title">
+                                                                ${supply[i].statValue} 
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="auctions-details__info__calc">
+                                                            <span class=" auctions-details__info__calc-perent">
+                                                                <span class=""></span>
+                                                            </span>
+                                                        </div>
+                                                      
+                                                        <div class="d-flex mt-4">
+                                                            <div class="auctions-details__info__value">
+                                                                ${supply[i].maxSupplyName} 
+                                                                <img class="px-2" src="${supply[i].infoIcon} " alt=""/>
+
+                                                            </div>
+                                                            <div class="auctions-details__info__title">
+                                                                ${supply[i].maxSupplyNum} 
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="d-flex">
+                                                            <div class="auctions-details__info__value">
+                                                                ${supply[i].totalSupplyName} 
+                                                                <img class="px-2" src="${supply[i].infoIcon} " alt=""/>
+
+                                                            </div>
+                                                            <div class="auctions-details__info__title">
+                                                                ${supply[i].totalSupplyNum} 
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+
+                                                    <div class="col-6 auctions-details__info__cap"> 
+                                                        <div class="d-flex">
+                                                            <div class="auctions-details__info__title">
+                                                                ${marketCup[i].marketCupName} /
+                                                            </div>
+
+                                                            <div class="auctions-details__info__title">
+                                                                ${volume[i].volumeName} 
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="auctions-details__info__value">
+                                                            ${volume[i].volumeAverage} 
+                                                        </div>
+                                                    </div>
+                                                
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>   
                                 </div>`);
-    }
+  }
 }
 
 function modalPages() {
-    $(".modal-body__success").hide();
+  $(".modal-body__success").hide();
+
+  $(".modal-body__submit").click(function () {
+    // Then show div on click.
+    $(".modal-body__main").hide();
+    $(".modal-body__success").show();
+  });
+
+  let template = null;
+
+  $(".modal").on("show.bs.modal", function (event) {
+    template = $(this).html();
+  });
+
+  $(".modal").on("hidden.bs.modal", function (e) {
+    $(this).html(template);
 
     $(".modal-body__submit").click(function () {
-        // Then show div on click.
-        $(".modal-body__main").hide();
-        $(".modal-body__success").show();
+      // Then show div on click.
+      $(".modal-body__main").hide();
+      $(".modal-body__success").show();
     });
-
-    let template = null;
-
-    $('.modal').on('show.bs.modal', function (event) {
-        template = $(this).html();
-    });
-
-    $('.modal').on('hidden.bs.modal', function (e) {
-        $(this).html(template);
-
-        $(".modal-body__submit").click(function () {
-            // Then show div on click.
-            $(".modal-body__main").hide();
-            $(".modal-body__success").show();
-        });
-    });
-
+  });
 }
 
 var scrollingBlocks;
 var swipeIcon;
+var auctionDetailsFooter;
 
 $(document).ready(function () {
-    generateAuctionInternalPage();
-    modalPages();
+  generateAuctionInternalPage();
+  modalPages();
 
-    scrollingBlocks = document.querySelectorAll(".scrolling-block");
-    swipeIcon = document.querySelector(".auctions-details__swipe-icon");
-    detailsImage = document.querySelector(".auctions-details__swipe-icon");
-
+  scrollingBlocks = document.querySelectorAll(".scrolling-block");
+  swipeIcon = document.querySelector(".auctions-details__swipe-icon");
+  auctionDetailsFooter = document.querySelector(".auctions-details__footer");
 });
 
 var scrollableContainer = document.querySelector(".auctions-details__content");
@@ -436,29 +563,42 @@ var scrollableContainer = document.querySelector(".auctions-details__content");
 var hammerSwipe = new Hammer(scrollableContainer);
 
 if (isMobile) {
+  hammerSwipe.get("swipe").set({
+    direction: Hammer.DIRECTION_ALL,
+    threshold: 1,
+    velocity: 0.1,
+  });
 
-    hammerSwipe.get("swipe").set({
-        direction: Hammer.DIRECTION_ALL,
-        threshold: 1,
-        velocity: 0.1,
-    });
+  hammerSwipe.on("swipeup swipedown", (event) => {
+    switch (event.type) {
+      case "swipeup":
+        // scrollingBlocks[0].style.transform = "translateY(0)";
+        // scrollingBlocks[1].style.transform = "translateY(0)";
+        swipeIcon.classList.add("active");
 
-    hammerSwipe.on("swipeup swipedown", (event) => {
-        switch (event.type) {
-            case "swipeup":
-                scrollingBlocks[0].style.transform = "translateY(-18%)";
-                scrollingBlocks[1].style.transform = "translateY(26%)";
-                swipeIcon.classList.add("active");
+        scrollingBlocks.forEach((element) => {
+          element.classList.add("activiosa");
+        });
 
-                break;
+        auctionDetailsFooter.classList.add("auctions-details__footer--hidden");
 
-            case "swipedown":
-                scrollingBlocks[0].style.transform = "translateY(0)";
-                scrollingBlocks[1].style.transform = "translateY(100%)";
+        break;
 
-                swipeIcon.classList.remove("active");
+      case "swipedown":
+        // scrollingBlocks[0].style.transform = "translateY(0)";
+        // scrollingBlocks[1].style.transform = "translateY(100%)";
 
-                break;
-        }
-    });
+        swipeIcon.classList.remove("active");
+
+        auctionDetailsFooter.classList.remove(
+          "auctions-details__footer--hidden"
+        );
+
+        scrollingBlocks.forEach((element) => {
+          element.classList.remove("activiosa");
+        });
+
+        break;
+    }
+  });
 }

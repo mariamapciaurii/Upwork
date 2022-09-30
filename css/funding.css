@@ -1,14 +1,58 @@
 /* FUNDING PAGE */
-.funding {
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.header__navbar__item--active {
+  background: radial-gradient(137.7% 1080.43% at -26.35% -38.1%,
+      #88c9ee 0%,
+      #e7f6fc 22.4%,
+      assets__item #b66de6 44.79%,
+      #d1e6fb 81.77%,
+      #92a1eb 100%);
+  border-radius: 15px;
+}
+
+
+html.p .funding {
   overflow: hidden;
 }
 
+html.page-funding {
+  height: 100%;
+}
+
+.page-funding {
+  height: 100%;
+}
+
+.funding {
+  height: calc(100% - 121px);
+}
+
+.funding .ri-container {
+  height: 100%;
+}
+
 .funding__container {
-  margin-top: 79px;
+  height: 100%;
   position: relative;
   transition: transform 300ms ease-out 0s;
 }
 
+.funding__container>.row {
+  height: 100%;
+}
+
+/* START BUTTONS */
 .funding__buttons {
   padding-top: 15px;
   padding-bottom: 10px;
@@ -33,26 +77,31 @@
   margin-right: 30px;
 }
 
-.deposit__section {
-  color: white;
-  padding: 10px 30px 30px 30px;
-}
-
 .funding__button.selected {
   border: 2px solid transparent;
-  border-image: linear-gradient(to left, rgba(126, 63, 179, 1) 1%, rgba(85, 66, 208, 1) 100%);
+  border-image: linear-gradient(to left,
+      rgba(126, 63, 179, 1) 1%,
+      rgba(85, 66, 208, 1) 100%);
   border-image-slice: 1;
   outline: none;
 }
 
 .funding__button__deposit {
   border: 2px solid transparent;
-  border-image: linear-gradient(to left, rgba(126, 63, 179, 1) 1%, rgba(85, 66, 208, 1) 100%);
+  border-image: linear-gradient(to left,
+      rgba(126, 63, 179, 1) 1%,
+      rgba(85, 66, 208, 1) 100%);
   border-image-slice: 1;
   outline: none;
 }
+/* END BUTTONS */
 
-/* DEPOSIT SECTION */
+/* START DEPOSIT SECTION */
+.deposit__section {
+  color: white;
+  padding: 10px 30px 30px 30px;
+}
+
 .deposit__section__title {
   font-weight: 500;
   font-size: 26px;
@@ -120,11 +169,13 @@
   width: 18px;
   margin-right: 10px;
 }
+/* END DEPOSIT SECTION */
 
-/* WITHDRAW SECTION */
+
+/* START WITHDRAW SECTION */
+
 .withdraw__section {
   padding: 10px 30px 50px 30px;
-  /* background: #0A0B0D; */
 }
 
 .withdraw__section__title {
@@ -246,9 +297,11 @@
 .withdraw__section__select img {
   width: 10px;
 }
+/* END WITHDRAW SECTION */
+
+
 
 /* CHART SECTION WITH ASSETS */
-
 .chart__assets__content {
   display: flex;
   align-items: center;
@@ -263,25 +316,18 @@
   margin-bottom: 15px;
 }
 
-.chart__assets__items {
-  min-width: 660px;
-}
-
-.chart__assets__items__scrollable {
-  width: 100%;
-  overflow: auto;
-}
-
-::-webkit-scrollbar {
-  -webkit-appearance: none;
+.funding__items__assets.funding__items__assets--mobile.activiosa .notOnActive {
   display: none;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: transparent;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.funding__items__assets.funding__items__assets--mobile .onlyOnActive {
+  display: none;
 }
+
+.funding__items__assets.funding__items__assets--mobile.activiosa .onlyOnActive {
+  display: block;
+}
+
 
 .funding__item__percentage,
 .funding__item__usd {
@@ -290,14 +336,12 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  color: #c0c0c0;
+  color: #5E5D74;
   opacity: 0.5;
   margin-left: 8px;
 }
 
 .funding__item__subname {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
@@ -305,49 +349,10 @@
   margin-left: 8px;
 }
 
-.chart__image {
-  padding: 10px;
-}
-
-.chart__image img {
-  width: 100%;
-}
-
-.chart__assets {
-  padding: 64px 25px 40px 40px;
-}
-
-.chart__assets__row {
-  width: 100%;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #1e1d1d;
-}
-
 .funding__items__content--left,
 .funding__items__content--right {
   background: rgba(0, 0, 0, 0.56);
   border-radius: 30px;
-}
-
-.chart__assets__icons {
-  width: 120px;
-  flex-shrink: 0;
-}
-
-.chart__assets__icon {
-  height: 45px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  border-bottom: 1px solid #1e1d1d;
-}
-
-.chart__assets__icon img {
-  width: 25px;
-  height: 25px;
 }
 
 .funding__items {
@@ -359,8 +364,6 @@
 .funding__item {
   display: flex;
   align-items: center;
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 22px;
@@ -369,8 +372,6 @@
 }
 
 .chart__assets__row--header .funding__item {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
@@ -386,4 +387,199 @@
   white-space: nowrap;
   min-width: 0;
   max-width: 120px;
+}
+
+.funding__assets__icons {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.funding__assets__icon {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-bottom: 1px solid #1e1d1d;
+}
+
+.funding__assets__icon img {
+  width: 25px;
+  height: 25px;
+}
+
+.assets__items {
+  width: 100%;
+  display: flex;
+  min-width: 820px;
+}
+
+.assets__item {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  width: 100%;
+  align-items: baseline;
+}
+
+.fassets__items__title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: 120px;
+}
+
+.funding__assets__items__scrollable {
+  width: 100%;
+  overflow: auto;
+}
+
+.funding__assets__row--header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9999;
+  padding-left: 120px;
+  overflow: auto;
+}
+
+.assets__item__percentage,
+.assets__item__usd {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #c0c0c0;
+  opacity: 0.5;
+  margin-left: 8px;
+}
+
+.assets__item__subname {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #c0c0c0;
+  margin-left: 8px;
+}
+
+.funding__assets__row {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #1e1d1d;
+}
+
+.funding__assets__icon {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-bottom: 1px solid #1e1d1d;
+}
+
+.funding__assets__icon img {
+  width: 25px;
+  height: 25px;
+}
+
+.assets__items {
+  width: 100%;
+  display: flex;
+  /* overflow: auto; */
+  min-width: 820px;
+}
+
+.assets__item {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  width: 100%;
+  align-items: baseline;
+}
+
+.funding__assets__row--header .assets__item {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.funding__column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.funding__row {
+  height: 100%;
+  overflow: hidden;
+}
+
+.funding__timeshift {
+  justify-content: end;
+  color: #D6D0D0;
+  background: #18171C;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  margin: 8px 16px 0 0;
+}
+
+.funding__timeshift--active {
+  color: #3E64CE;
+}
+
+.funding__section--left {
+  height: 722px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.56);
+  border-radius: 30px;
+}
+
+.funding__items__content--right {
+  display: flex;
+  flex-direction: column;
+  height: 722px;
+}
+
+.funding__chart img {
+  width: 100%;
+}
+
+.funding__section__top {
+  padding-bottom: 50px;
+}
+
+.funding__assets {
+  height: 100%;
+  border-radius: 30px;
+  overflow-y: auto;
+  padding: 0 16px 21px 16px;
+  margin-bottom: 30px;
+}
+
+.funding__assets__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.funding__assets__items {
+  min-width: 820px;
+}
+.assets__item--clickable{
+  cursor: pointer;
 }

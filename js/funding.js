@@ -14,8 +14,8 @@ let fundingContent = {
             percentage: "%",
         },
         {
-            itemImage: "assets/btc-fund.png",
-            itemName: "GST",
+            itemImage: "assets/bnb.png",
+            itemName: "Bitcoin",
             itemSubName: "GST",
             itemPrice: "16 500",
             itemUsd: "EUR",
@@ -25,7 +25,7 @@ let fundingContent = {
             percentage: "%",
         },
         {
-            itemImage: "assets/btc-fund.png",
+            itemImage: "assets/doge.png",
             itemName: "DogeCoin",
             itemSubName: "DGC",
             itemPrice: "4 140",
@@ -36,7 +36,73 @@ let fundingContent = {
             percentage: "%",
         },
         {
-            itemImage: "assets/btc-fund.png",
+            itemImage: "assets/dot.png",
+            itemName: "Etherium",
+            itemSubName: "ETH",
+            itemPrice: "21 200",
+            itemUsd: "USD",
+            itemAmount: "42",
+            itemBalance: "433.12B",
+            itemAllocation: "100",
+            percentage: "%",
+        },
+        {
+            itemImage: "assets/eth.png",
+            itemName: "Etherium",
+            itemSubName: "ETH",
+            itemPrice: "21 200",
+            itemUsd: "USD",
+            itemAmount: "42",
+            itemBalance: "433.12B",
+            itemAllocation: "100",
+            percentage: "%",
+        },
+        {
+            itemImage: "assets/binance.png",
+            itemName: "Etherium",
+            itemSubName: "ETH",
+            itemPrice: "21 200",
+            itemUsd: "USD",
+            itemAmount: "42",
+            itemBalance: "433.12B",
+            itemAllocation: "100",
+            percentage: "%",
+        },
+        {
+            itemImage: "assets/tesla.png",
+            itemName: "Etherium",
+            itemSubName: "ETH",
+            itemPrice: "21 200",
+            itemUsd: "USD",
+            itemAmount: "42",
+            itemBalance: "433.12B",
+            itemAllocation: "100",
+            percentage: "%",
+        },
+        {
+            itemImage: "assets/xrx.png",
+            itemName: "Etherium",
+            itemSubName: "ETH",
+            itemPrice: "21 200",
+            itemUsd: "USD",
+            itemAmount: "42",
+            itemBalance: "433.12B",
+            itemAllocation: "100",
+            percentage: "%",
+        },
+        {
+            itemImage: "assets/binance.png",
+            itemName: "Etherium",
+            itemSubName: "ETH",
+            itemPrice: "21 200",
+            itemUsd: "USD",
+            itemAmount: "42",
+            itemBalance: "433.12B",
+            itemAllocation: "100",
+            percentage: "%",
+        },
+        {
+            itemImage: "assets/binance.png",
             itemName: "Etherium",
             itemSubName: "ETH",
             itemPrice: "21 200",
@@ -84,94 +150,101 @@ let withdrawContent = {
 };
 
 function renderChart() {
-    let chartAssetsContainer = $(".chart__assets__items");
-    let chartImageContainer = $(".chart__image");
+    let chartAssetsContainer = $(".funding__assets__items");
+    let chartImageContainer = $(".funding__chart");
+
     let chartImageSrc = fundingContent.chartImage;
+
     let chartImage = `<img src="${chartImageSrc}" alt="chartImage"/>`;
 
-    let chartIconsContainer = $(".chart__assets__icons");
+    let chartIconsContainer = $(".funding__assets__icons");
+
+    let superTesl = $(".funding__assets");
 
     chartImageContainer.append(chartImage);
 
-    let chartAssetsHeader = `<div class="chart__assets__row chart__assets__row--header">
-                                <div class="funding__items">
-                                    <div class="funding__item">
-                                        Name
-                                    </div>
+    let chartAssetsHeader = `<div class="funding__assets__row funding__assets__row--header">
+                                  <div class="assets__items">
+                                      
+                                      <div class="assets__item">
+                                          Name
+                                      </div>
+  
+                                      <div class="assets__item">
+                                          Price
+                                      </div>
+  
+                                      <div class="assets__item">
+                                          Amount
+                                      </div>
+  
+                                      <div class="assets__item">
+                                          Balance
+                                      </div>
+  
+                                      <div class="assets__item">
+                                          Allocation
+                                      </div>                                  
+                                  </div>
+                             </div>`;
 
-                                    <div class="funding__item">
-                                        Price
-                                    </div>
+    superTesl.prepend(chartAssetsHeader);
 
-                                    <div class="funding__item">
-                                        Amount
-                                    </div>
-
-                                    <div class="funding__item">
-                                        Balance
-                                    </div>
-
-                                    <div class="funding__item">
-                                        Allocation
-                                    </div>
-                                </div>
-                           </div>`;
-
-    chartAssetsContainer.append(chartAssetsHeader);
+    // chartAssetsContainer.append(chartAssetsHeader);
 
     for (let i = 0; i < fundingContent.items.length; i++) {
-        chartAssetsContainer.append(`<div class="chart__assets__row">
-                            
-                                      <div class="funding__items">
-
-                                            <div class="funding__item">
-                                                    
-                                                 <div class="funding__items__title">
+        chartAssetsContainer.append(`<div class="funding__assets__row">
+                              
+                                        <div class="assets__items">
+  
+                                              <div class="assets__item assets__item--clickable">
+                                                      
+                                                   <div class="assets__items__title">
                                                     ${fundingContent.items[i].itemName}
-                                                </div>
-
-                                                <div class="funding__item__subname">
+                                                  </div>
+  
+                                                  <div class="assets__item__subname">
                                                     ${fundingContent.items[i].itemSubName} 
-                                                </div>                                                    
-                                 
-                                            </div>
+                                                      
+                                                  </div>                                                    
                                    
-                                              <div class="funding__item">
-                                                  ${fundingContent.items[i].itemPrice}
-                                                  <div class="funding__item__usd">
-                                                      ${fundingContent.items[i].itemUsd}
-                                                  </div>                                                      
                                               </div>
-  
-                                              <div class="funding__item">
-                                                  ${fundingContent.items[i].itemAmount}
-                                              </div>
-  
-                                              <div class="funding__item">
-                                                  ${fundingContent.items[i].itemBalance}
-                                                  <div class="funding__item__usd">
-                                                      ${fundingContent.items[i].itemUsd}
-                                                  </div>                                                   
-                                              </div>
-  
-                                              <div class="funding__item">
-                                                  ${fundingContent.items[i].itemAllocation}
-  
-                                                  <div class="funding__item__percentage">
-                                                      ${fundingContent.items[i].percentage}
-                                                  </div>                                                   
-                                              </div>
-                                        
-                                      </div>                 
-                                  `);
+                                     
+                                                <div class="assets__item">
+                                                   ${fundingContent.items[i].itemPrice}
+                                                    <div class="assets__item__usd">
+                                                        USD
+                                                    </div>                                                      
+                                                </div>
+    
+                                                <div class="assets__item">
+                                                   ${fundingContent.items[i].itemAmount}
+                                                </div>
+    
+                                                <div class="assets__item">
+                                                    ${fundingContent.items[i].itemBalance}
+                                                    <div class="assets__item__usd">
+                                                        USD
+                                                    </div>                                                   
+                                                </div>
+    
+                                                <div class="assets__item">
+                                                    ${fundingContent.items[i].itemAllocation}
+    
+                                                    <div class="assets__item__percentage">
+                                                        %
+                                                    </div>                                                   
+                                                </div>                                              
+                                        </div>                 
+                                    `);
+
+        chartIconsContainer.append(`<div class="funding__assets__icon">
+                                    <img src="${fundingContent.items[i].itemImage}" alt="${fundingContent.items[i].name}"/>
+                                `);
     }
 
-    for (let i = 0; i < fundingContent.items.length; i++) {
-        chartIconsContainer.append(`<div class="chart__assets__icon">
-        <img src="${fundingContent.items[i].itemImage}" alt="${fundingContent.items[i].itemName}"/>
-    `);
-    }
 }
+
 
 function renderDeposit() {
     let depositContainer = $(".deposit");
@@ -365,11 +438,41 @@ function fundingButtons() {
         $(this).addClass("selected");
     });
 }
+function clickableItem() {
+    $(".assets__item--clickable").click(function () {
+        alert("io")
+    });
+}
+
+var arrow;
+var arrowTop;
 
 $(document).ready(function () {
     renderChart();
     renderDeposit();
     fundingButtons();
+    clickableItem();
+
+    arrow = document.querySelector(".funding__items__assets--mobile");
+    arrowTop = document.querySelector(".funding__assets__title--mobile")
+    let listItems = $(".funding__assets__items__scrollable");
+    let headerItems = $(".funding__assets__row--header");
+
+    // listItems.scrollLeft = 120;
+
+    headerItems.scroll(function ($event) {
+        if ($event) {
+            let scrollLeft = this.scrollLeft;
+            listItems.scrollLeft(scrollLeft);
+        }
+    });
+
+    listItems.scroll(function ($event) {
+        if ($event) {
+            let scrollLeft = this.scrollLeft;
+            headerItems.scrollLeft(scrollLeft);
+        }
+    });
 });
 
 var scrollableContainer = document.querySelector(".funding__container");
@@ -384,12 +487,20 @@ if (isMobile) {
             case "swipeleft":
                 scrollableContainer.style.transform = "translateX(-104%)";
 
-                console.log("left");
+                arrow.classList.add("activiosa");
+                arrowTop.classList.add("top__arrow");
+
+
                 break;
+
             case "swiperight":
                 scrollableContainer.style.transform = "translateX(0)";
-                console.log("right");
+
+                arrow.classList.remove("activiosa");
+                arrowTop.classList.remove("top__arrow");
+
                 break;
         }
     });
+
 }

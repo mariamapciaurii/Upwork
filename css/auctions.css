@@ -9,7 +9,6 @@ html.page-auctions {
 }
 
 .auctions {
-  padding-top: 58px;
   height: calc(100% - 155px);
   overflow: auto;
 }

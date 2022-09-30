@@ -10,10 +10,6 @@
   padding-bottom: 17px;
 }
 
-.auctions-details {
-  padding-top: 34px;
-}
-
 .auctions-details__left,
 .auctions-details__right {
   background: #000000;
@@ -29,7 +25,7 @@
 }
 
 .auctions-details__right {
-  padding: 64px 27px 64px 27px;
+  padding: 64px 22px 64px 22px;
 }
 
 /* AUCTIONS PAGE INSIDE*/
@@ -137,6 +133,7 @@
 .auctions-details__info__market {
   display: flex;
   flex-direction: column;
+  padding-left: 16px;
 }
 
 .auctions-details__info__volume {
@@ -145,18 +142,21 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  /* align-items: center; */
 }
-
+.auctions-details__info__volume{
+  padding-left: 32px;
+}
 .auctions-details__info__title {
   color: #9fa4b5;
   font-size: 14px;
 }
-
+.auctions-details__info__supply{
+  padding-left: 8px;
+}
 .auctions-details__info__market img,
 .auctions-details__info__volume img,
 .auctions-details__info__supply img {
-  width: 30px;
+  width: 24px;
 }
 
 .approved-icon {
@@ -194,7 +194,7 @@
   width: 100%;
 }
 
-.auctions-details__info__calc-perent>span:first-child {
+.auctions-details__info__calc-perent > span:first-child {
   display: inherit;
   background-color: #666b7d;
   height: 100%;
@@ -213,18 +213,19 @@
 }
 
 .auctions-details__swipe-icon {
-  margin-top: 150px;
   justify-content: center;
   display: flex;
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: 14px;
   left: 0;
   right: 0;
-  transition: transform 200ms ease-in;
+  transition: opacity 200ms ease-in;
+  z-index: 9;
 }
 
 .auctions-details__swipe-icon.active {
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
+  opacity: 0;
 }
 
 /* BID BUTTON */
@@ -234,9 +235,11 @@
   width: 289px;
   height: 44px;
   border: 2px solid transparent;
-  border-image: linear-gradient(to left,
-      rgba(126, 63, 179, 1) 1%,
-      rgba(85, 66, 208, 1) 100%);
+  border-image: linear-gradient(
+    to left,
+    rgba(126, 63, 179, 1) 1%,
+    rgba(85, 66, 208, 1) 100%
+  );
   border-image-slice: 1;
   color: #d6d0d0;
   outline: none !important;
@@ -251,11 +254,6 @@
 }
 
 /* MODAL */
-
-/* .modal {
-  display: flex;
-  align-items: center;
-} */
 
 body.modal-open .modal {
   display: flex !important;
@@ -284,7 +282,7 @@ body.modal-open .modal .modal-dialog {
   font-weight: 300;
   font-size: 25px;
   line-height: 30px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .modal-footer {
@@ -300,13 +298,13 @@ body.modal-open .modal .modal-dialog {
 .modal__input input {
   padding: 15px 8px;
   width: 100%;
-  background: linear-gradient(180deg, #161616 0%, #17161C 72.78%, #191724 100%);
+  background: linear-gradient(180deg, #161616 0%, #17161c 72.78%, #191724 100%);
   border-radius: 5px;
   border: none;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
-  color: #FFFFFF;
+  color: #ffffff;
   position: relative;
 }
 
@@ -323,7 +321,7 @@ body.modal-open .modal .modal-dialog {
   font-weight: 300;
   font-size: 14px;
   line-height: 17px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 15px;
 }
 
@@ -333,7 +331,7 @@ body.modal-open .modal .modal-dialog {
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
-  color: #D6D0D0;
+  color: #d6d0d0;
 }
 
 .modal__input__usd {
@@ -343,7 +341,7 @@ body.modal-open .modal .modal-dialog {
   font-weight: 300;
   font-size: 15px;
   line-height: 18px;
-  color: #5C556D;
+  color: #5c556d;
 }
 
 .check-container {
@@ -380,7 +378,7 @@ body.modal-open .modal .modal-dialog {
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 65px;
 }
 

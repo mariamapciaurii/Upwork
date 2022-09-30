@@ -34,3 +34,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+
+.ri-container {
+  padding: 0 64px;
+}

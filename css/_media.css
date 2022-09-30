@@ -10,9 +10,30 @@
   }
 }
 
+@media (max-width: 767.98px) {}
+
 /* Mobile Works Under 767.98p  */
 
 @media (max-width: 767.98px) {
+  .ri-container {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  body.page-auctions {
+    background: #000;
+  }
+
+  body.page-details {
+    overflow: hidden;
+    background: #000;
+    height: 100%;
+  }
+
+  html.page-details {
+    height: 100%;
+  }
+
   body.page-auctions {
     padding-right: 0;
     height: auto;
@@ -83,10 +104,6 @@
     margin-bottom: 52px;
   }
 
-  .auctions .container {
-    padding: 0;
-  }
-
   .auctions__header {
     padding-left: 20px;
   }
@@ -125,6 +142,16 @@
   /* For swipe */
   .auctions-details {
     padding-top: 0;
+    height: calc(100% - 135px);
+    position: relative;
+  }
+
+  .auctions-details .ri-container {
+    height: 100%;
+  }
+
+  .auctions-details__content {
+    height: 100%;
   }
 
   .auctions-details__content {
@@ -132,14 +159,17 @@
   }
 
   .auctions-details__right {
-    padding: 4px 17px 14px 17px;
+    padding: 4px 10px 14px 10px;
+    height: 100%;
+    /* max-height: 400px; */
+    overflow: scroll;
   }
 
   /* AUCTIONS DETAILS MOBILE */
 
   .auctions-details__left {
     height: 412px;
-    margin-top: 60px;
+    /* margin-top: 60px; */
   }
 
   .auctions-details__image {
@@ -148,15 +178,35 @@
     margin-bottom: 0;
   }
 
+  .approved-icon {
+    width: 16px !important;
+  }
+
   .auctions-details__info__market img,
   .auctions-details__info__volume img,
   .auctions-details__info__supply img {
     width: 24px;
   }
 
+  .auctions-details__info__supply {
+    padding-top: 32px;
+  }
+
+  .auctions-details__info__cap {
+    padding-top: 32px;
+    padding-left: 35px;
+  }
+
   .auctions-details__name {
     font-size: 20px;
     margin-bottom: 11px;
+  }
+
+  .auctions-details__info__volume {
+    border: none;
+    justify-content: center;
+    display: flex;
+    padding-left: 35px;
   }
 
   .auctions-details__title,
@@ -166,6 +216,13 @@
 
   .auctions-details__footer {
     width: 300px;
+    transition: all 300ms ease-in-out;
+    will-change: opacity;
+  }
+
+  .auctions-details__footer.auctions-details__footer--hidden {
+    opacity: 0;
+    visibility: hidden;
   }
 
   .auctions-details__list__title,
@@ -176,6 +233,11 @@
   .auctions-details__info__pos-value,
   .auctions-details__info__neg-value {
     font-size: 12px;
+  }
+
+  .auctions-details__info {
+    margin-top: 0;
+    padding: 32px 8px;
   }
 
   .auctions-details__list__item {
@@ -191,6 +253,8 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: end;
+    z-index: 99999;
+    padding-top: 0;
   }
 
   .funding__button-wrapper {
@@ -199,6 +263,7 @@
 
   .funding__button {
     width: 90px;
+    font-size: 11px;
   }
 
   .deposit__section__mobile_class {
@@ -207,6 +272,14 @@
 
   .deposit__section__subtitle {
     margin-bottom: 30px;
+  }
+
+  .deposit__section {
+    padding: 15px;
+  }
+
+  .withdraw__section {
+    padding: 15px;
   }
 
   .chart__assets__row--header .funding__item {
@@ -222,30 +295,69 @@
   }
 
   .chart__assets__icons {
-    width: 52px;
+    width: 65px;
+  }
+
+  .chart__assets {
+    padding: 0 16px 61px 16px;
+    height: calc(100% - 153px);
+  }
+
+  .chart__assets__content--funding {
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 28px;
   }
 
   .chart {
     position: absolute;
     left: 104%;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
-  .page-details {
-    overflow: hidden;
+  .funding__item__subname {
+    color: #425F99;
+  }
+
+  .assets__item__subname {
+    color: #425F99;
+
+  }
+
+  .funding__items__content--right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   .scrolling-block {
-    height: calc(100% - 135px) !important;
+    height: 100%;
     width: 100%;
     overflow: hidden;
     touch-action: none;
     position: absolute;
-    transition: transform 600ms ease-out 0s;
+    top: 0;
+    transition: all 300ms ease-in-out;
+    margin-top: 100px;
   }
 
   .scrolling-block:last-child {
-    transform: translateY(100%);
+    bottom: -100%;
+    top: auto;
+    margin-top: 0;
+  }
+
+  .scrolling-block.activiosa {
+    height: 300px;
+    margin-top: 0;
+  }
+
+  .scrolling-block.activiosa:last-child {
+    height: calc(100% - 300px) !important;
+    bottom: 0;
   }
 
   .funding__items__assets {
@@ -254,6 +366,16 @@
     font-size: 20px;
     line-height: 24px;
     color: #ffffff;
+    margin-bottom: 0;
+  }
+
+  .funding__assets__title {
+    /* background: rgba(12, 12, 12, 0.89); */
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: env(safe-area-inset-bottom);
   }
 
   .funding__items__assets_back {
@@ -271,6 +393,10 @@
     padding: 2px 7px;
   }
 
+  .trade__market__content--left {
+    margin-bottom: 0;
+  }
+
   .chart__assets__items__fixed {
     width: 450px;
   }
@@ -280,7 +406,7 @@
   }
 
   .trade {
-    height: calc(100% - 241px);
+    height: calc(100% - 160px);
   }
 
   .market__item {
@@ -334,7 +460,14 @@
   }
 
   .week-chart {
-    padding: 3px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    color: #d6d0d0;
+    padding: 3px 8px 3px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   /* .cashflow {
@@ -356,17 +489,24 @@
     border-style: solid;
     border-color: #262345;
     border-radius: 15px;
-    padding: 11px 15px;
-    height: 252px;
+    padding: 13px 18px;
+    height: 200px;
+  }
+
+  .portfolio__assets__row--header {
+    padding-left: 76px;
+  }
+
+  .page-portfolio {
+    overflow: hidden;
   }
 
   .weeks div:not(:first-child) {
     padding: 0 7px;
   }
 
-  .portfolio__chart {
-    padding: 24px 35px;
-    margin-bottom: 35px;
+  .portfolio__chart img {
+    padding: 10px 35px;
   }
 
   .portfolio__container {
@@ -415,7 +555,7 @@
   }
 
   .portfolio__section--left>.row {
-    height: calc(100% - 252px);
+    height: calc(100% - 232px);
   }
 
   .portfolio__section--left>.row>.col-12 {
@@ -462,11 +602,85 @@
     height: calc(100% - 130px);
   }
 
-  .trade-details .container {
+  .trade-details .ri-container {
     height: 100%;
   }
 
   .trade-details__container .row {
     height: 100%;
+  }
+
+  html.page-funding {
+    height: 100%;
+  }
+
+  .page-funding {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .funding {
+    height: calc(100% - 135px);
+  }
+
+  .funding .ri-container {
+    height: 100%;
+  }
+
+  .funding__container {
+    height: 100%;
+  }
+
+  .funding__container>.row {
+    height: 100%;
+  }
+
+  .deposit {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chart {
+    padding: 0;
+  }
+
+  .funding__section--left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .funding__timeshift {
+    font-size: 11px;
+  }
+
+  .funding__assets__icons {
+    width: 65px;
+  }
+
+  .funding__assets__row--header {
+    padding-left: 76px;
+  }
+
+  .funding__row {
+    height: calc(100% - 290px);
+  }
+
+  .top__arrow {
+    bottom: unset;
+    top: 135px;
+  }
+
+  .funding__section--left {
+    margin-top: 30px;
+  }
+
+  .funding__assets__items {
+    min-width: 673px;
+  }
+
+  .activiosa {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }

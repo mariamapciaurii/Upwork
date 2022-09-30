@@ -25,7 +25,7 @@
 
 <body class="page-funding">
     <header class="header">
-        <div class="container">
+        <div class="ri-container">
             <div class="header__content row justify-content-between">
 
                 <div class="header__left col-12 col-md-10">
@@ -68,67 +68,72 @@
     </header>
 
     <main class="funding">
-        <div class="container">
+        <div class="ri-container">
             <div class="funding__container">
 
                 <div class="row">
 
-                    <div class="chart col-12 col-lg-8">
-                        <div class="chart__assets__title d-block d-lg-none">
-                            <div class="funding__items__assets funding__items__assets_back">
-                                >
+                    <div class="col-12 col-md-6 col-lg-7 col-xl-8 funding__section--left chart">
+
+                        <div class="funding__section__top">
+
+                            <div class="d-flex justify-content-end">
+                                
+                                <div class="row align-items-center funding__timeshift">
+                                    <div class="col-2 funding__timeshift--active">1H</div>
+                                    <div class="col-2">1D</div>
+                                    <div class="col-2">1W</div>
+                                    <div class="col-2">1M</div>
+                                    <div class="col-2">1Y</div>
+                                    <div class="col-2">ALL</div>
+                                </div>
                             </div>
+                  
+                            <div class="funding__chart">
+
+                            </div>
+
                         </div>
 
-                        <div class="funding__items__content--right">
+                        <div class="row funding__row">
 
-                            <div class="chart__image">
+                            <div class="col-12 funding__column">
+                               
+                                <div class="funding__assets">
 
-                            </div>
+                                    <div class="funding__assets__content">
 
-                            <div class="chart__assets">
+                                        <div class="funding__assets__icons">
 
-                                <div class="chart__assets__title d-none d-lg-block">
-                                    <div class="funding__items__assets">
-                                        Your Assets
-                                    </div>
-                                </div>
 
-                                <div class="chart__assets__content">
+                                        </div>
 
-                                    <div class="chart__assets__icons">
+                                        <div class="funding__assets__items__scrollable">
 
-                                        <div class="chart__assets__icon chart__assets__icon--placeholder"></div>
+                                            <div class="funding__assets__items">
 
-                                    </div>
-
-                                    <div class="chart__assets__items__scrollable">
-
-                                        <div class="chart__assets__items">
+                                            </div>
 
                                         </div>
 
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </div>
-                        
                     </div>
 
-                    <div class="deposit col-12 col-lg-4">
+                    <div class="deposit col-12 col-md-6 col-lg-5 col-xl-4">
 
-                        <div class="chart__assets__title d-block d-lg-none">
-                            <div class="funding__items__assets">
-                                Your Assets >
-                            </div>
-                        </div>
                     </div>
 
                 </div>
+            </div>
 
+            <div class="funding__assets__title funding__assets__title--mobile d-block d-sm-none">
+                <div class="funding__items__assets funding__items__assets--mobile">
+                    <span class="notOnActive"> Your Assets ></span>
+                    <span class="onlyOnActive"> &lt; </span>
+                </div>
             </div>
         </div>
     </main>

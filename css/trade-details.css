@@ -584,8 +584,8 @@ select:not(:checked) {
   align-items: center;
   justify-content: center;
   background: rgba(12, 12, 12, 0.89);
-  height: 65px;
   width: 100%;
+  padding: 10px;
   position: fixed;
   left: 0;
   right: 0;

@@ -2,8 +2,69 @@
 
 let fundingContent = {
   chartImage: "assets/portfolio-chart.png",
-  items: [{
+  items: [
+    {
       image: "assets/btc-fund.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+    {
+      image: "assets/doge.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+    {
+      image: "assets/dot.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+    {
+      image: "assets/eth.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+    {
+      image: "assets/inu.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+    {
+      image: "assets/tesla.png",
+      name: "Bitcoin",
+      subName: "BCT",
+      price: "7 024",
+      pamount: "12",
+      balance: "433.12B",
+      allocation: "100",
+      pl: "100",
+    },
+    {
+      image: "assets/teth.png",
       name: "Bitcoin",
       subName: "BCT",
       price: "7 024",
@@ -32,77 +93,6 @@ let fundingContent = {
       allocation: "100",
       pl: "100",
     },
-    {
-      image: "assets/btc-fund.png",
-      name: "Bitcoin",
-      subName: "BCT",
-      price: "7 024",
-      pamount: "12",
-      balance: "433.12B",
-      allocation: "100",
-      pl: "100",
-    },
-    {
-      image: "assets/btc-fund.png",
-      name: "Bitcoin",
-      subName: "BCT",
-      price: "7 024",
-      pamount: "12",
-      balance: "433.12B",
-      allocation: "100",
-      pl: "100",
-    },
-    {
-      image: "assets/btc-fund.png",
-      name: "Bitcoin",
-      subName: "BCT",
-      price: "7 024",
-      pamount: "12",
-      balance: "433.12B",
-      allocation: "100",
-      pl: "100",
-    },
-    {
-      image: "assets/btc-fund.png",
-      name: "Bitcoin",
-      subName: "BCT",
-      price: "7 024",
-      pamount: "12",
-      balance: "433.12B",
-      allocation: "100",
-      pl: "100",
-    },
-    {
-      image: "assets/btc-fund.png",
-      name: "Bitcoin",
-      subName: "BCT",
-      price: "7 024",
-      pamount: "12",
-      balance: "433.12B",
-      allocation: "100",
-      pl: "100",
-    },
-    {
-      image: "assets/btc-fund.png",
-      name: "Bitcoin",
-      subName: "BCT",
-      price: "7 024",
-      pamount: "12",
-      balance: "433.12B",
-      allocation: "100",
-      pl: "100",
-    },
-    {
-      image: "assets/btc-fund.png",
-      name: "Bitcoin",
-      subName: "BCT",
-      price: "7 024",
-      pamount: "12",
-      balance: "433.12B",
-      allocation: "100",
-      pl: "100",
-    },
-
     {
       image: "assets/btc-fund.png",
       name: "Bitcoin",
@@ -116,12 +106,45 @@ let fundingContent = {
   ],
 };
 
-let cashflow = [{
-  image: "assets/cashflow-chart.png",
-  value: "$ 10 , 000",
-}, ];
+let cashflow = [
+  {
+    image: "assets/cashflow-chart.png",
+    value: "$ 10 , 000",
+  },
+];
 
-let contractContent = [{
+let contractContent = [
+  {
+    chart: "assets/contract-chart.png",
+    image: "assets/cotract-image.png",
+    name: "Etherium",
+    subName: "ETH",
+    days: "26 days",
+    transaction: "0.04",
+    volume: "10,000",
+    revenue: "$ 150.59",
+  },
+  {
+    chart: "assets/contract-chart.png",
+    image: "assets/cotract-image.png",
+    name: "Etherium",
+    subName: "ETH",
+    days: "26 days",
+    transaction: "0.04",
+    volume: "10,000",
+    revenue: "$ 150.59",
+  },
+  {
+    chart: "assets/contract-chart.png",
+    image: "assets/cotract-image.png",
+    name: "Etherium",
+    subName: "ETH",
+    days: "26 days",
+    transaction: "0.04",
+    volume: "10,000",
+    revenue: "$ 150.59",
+  },
+  {
     chart: "assets/contract-chart.png",
     image: "assets/cotract-image.png",
     name: "Etherium",
@@ -178,14 +201,18 @@ function renderChart() {
   let chartImageContainer = $(".portfolio__chart");
 
   let chartImageSrc = fundingContent.chartImage;
+
   let chartImage = `<img src="${chartImageSrc}" alt="chartImage"/>`;
 
   let chartIconsContainer = $(".portfolio__assets__icons");
+
+  let superTesl = $(".portfolio__assets");
 
   chartImageContainer.append(chartImage);
 
   let chartAssetsHeader = `<div class="portfolio__assets__row portfolio__assets__row--header">
                                 <div class="assets__items">
+                                    
                                     <div class="assets__item">
                                         Name
                                     </div>
@@ -213,7 +240,9 @@ function renderChart() {
                                 </div>
                            </div>`;
 
-  chartAssetsContainer.append(chartAssetsHeader);
+  superTesl.prepend(chartAssetsHeader);
+
+  // chartAssetsContainer.append(chartAssetsHeader);
 
   for (let i = 0; i < fundingContent.items.length; i++) {
     chartAssetsContainer.append(`<div class="portfolio__assets__row">
@@ -267,12 +296,10 @@ function renderChart() {
                                             </div>
                                       </div>                 
                                   `);
-  }
 
-  for (let i = 0; i < fundingContent.items.length; i++) {
     chartIconsContainer.append(`<div class="portfolio__assets__icon">
-        <img src="${fundingContent.items[i].image}" alt="${fundingContent.items[i].name}"/>
-    `);
+                                  <img src="${fundingContent.items[i].image}" alt="${fundingContent.items[i].name}"/>
+                              `);
   }
 }
 
@@ -443,10 +470,9 @@ $(document).ready(function () {
 
   if (isMobile) {
     scrollableContainer.scroll(function () {
-
       let scrollTop = this.scrollTop;
 
-      if (scrollTop > 0) {
+      if (scrollTop > 120) {
         chartContaienr.slideUp();
       }
 
@@ -455,5 +481,23 @@ $(document).ready(function () {
       }
     });
   }
-  
+
+  let listItems = $(".portfolio__assets__items__scrollable");
+  let headerItems = $(".portfolio__assets__row--header");
+
+  // listItems.scrollLeft = 120;
+
+  headerItems.scroll(function ($event) {
+    if ($event) {
+      let scrollLeft = this.scrollLeft;
+      listItems.scrollLeft(scrollLeft);
+    }
+  });
+
+  listItems.scroll(function ($event) {
+    if ($event) {
+      let scrollLeft = this.scrollLeft;
+      headerItems.scrollLeft(scrollLeft);
+    }
+  });
 });

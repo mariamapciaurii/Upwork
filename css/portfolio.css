@@ -27,11 +27,11 @@
 
 /* MARKET PLACE  */
 .portfolio__assets {
-  height: 418px;
-  /* height: 100%; */
+  /* height: 418px; */
+  height: 100%;
   border-radius: 30px;
   overflow-y: auto;
-  padding: 21px 16px 21px 16px;
+  padding: 0 16px 21px 16px;
 }
 
 .portfolio__assets__content {
@@ -54,6 +54,16 @@
 
 .portfolio__assets__items__scrollable {
   width: 100%;
+  overflow: auto;
+}
+
+.portfolio__assets__row--header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9999;
+  padding-left: 120px;
   overflow: auto;
 }
 
@@ -108,6 +118,22 @@
   border-bottom: 1px solid #1e1d1d;
 }
 
+/* .portfolio__assets__icons {
+  position: relative;
+} */
+
+/* .portfolio__assets__icons ::before {
+  content: "";
+  display: block;
+  width: 120px;
+  position: absolute;
+  left: 0;
+  top: -45px;
+  background: #000;
+  height: 45px;
+  z-index: 999999;
+} */
+
 .portfolio__assets__icon img {
   width: 25px;
   height: 25px;
@@ -116,7 +142,8 @@
 .assets__items {
   width: 100%;
   display: flex;
-  overflow: auto;
+  /* overflow: auto; */
+  min-width: 820px;
 }
 
 .assets__item {
@@ -214,10 +241,31 @@
 
 /* CONTRACTS */
 
+.portfolio__row {
+  height: 100%;
+  overflow: hidden;
+}
+
+.portfolio__column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio--right {
+  height: 100%;
+}
+
 .contracts__container {
-  height: 465px;
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.contracts {
+  height: calc(100% - 287px);
+  display: flex;
+  flex-direction: column;
 }
 
 .contracts__title {
@@ -315,7 +363,6 @@
   font-size: 20px;
   line-height: 24px;
   color: #4a4e59;
-  margin-bottom: 13px;
 }
 
 .portfolio__section--left__value {
@@ -367,7 +414,7 @@ body.page-portfolio {
   height: 100%;
 }
 
-.portfolio .container {
+.portfolio .ri-container {
   height: 100%;
 }
 
@@ -381,6 +428,8 @@ body.page-portfolio {
 
 .portfolio__section--left {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio {

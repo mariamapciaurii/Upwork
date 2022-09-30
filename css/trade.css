@@ -23,7 +23,7 @@ body.page-trade {
   height: calc(100% - 121px);
 }
 
-.trade .container {
+.trade .ri-container {
   height: 100%;
 }
 
@@ -37,7 +37,7 @@ body.page-trade {
 
 .trade__market {
   height: 100%;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 }
 
 .trade__market__content {
@@ -51,7 +51,6 @@ body.page-trade {
 }
 
 /* MARKET PLACE WITH ASSETS*/
-
 .trade__market__header {
   font-weight: 500;
   font-size: 30px;
@@ -447,8 +446,8 @@ select:not(:checked) {
   align-items: center;
   justify-content: center;
   background: rgba(12, 12, 12, 0.89);
-  height: 65px;
   width: 100%;
+  padding: 10px;
   position: fixed;
   left: 0;
   right: 0;
