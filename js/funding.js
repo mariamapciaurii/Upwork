@@ -149,6 +149,94 @@ let withdrawContent = {
     arrowDown: "assets/arrow-down.svg",
 };
 
+let modalContent = [
+    {
+        name: "Bitcoin",
+        subName: "BTC",
+        image: "assets/btc-fund.png",
+        numBTC: "0.00015",
+        numCAD: "15.6",
+    },
+    {
+        name: "Etherium",
+        subName: "ETH",
+        image: "assets/eth.png",
+        numBTC: "0.00015",
+        numCAD: "15.6",
+    },
+    {
+        name: "Tether",
+        subName: "USDT",
+        image: "assets/teth.png",
+        numBTC: "0.00015",
+        numCAD: "15.6",
+    },
+    {
+        name: "Tesla",
+        subName: "BTC",
+        image: "assets/inu.png",
+        numBTC: "0.00015",
+        numCAD: "15.6",
+    },
+    {
+        name: "Binance",
+        subName: "BNB",
+        image: "assets/binance.png",
+        numBTC: "0.00015",
+        numCAD: "15.6",
+    },
+    {
+        name: "XRP",
+        subName: "XRP",
+        image: "assets/xrx.png",
+        numBTC: "0.00015",
+        numCAD: "15.6",
+    },
+    {
+        name: "Solana",
+        subName: "SOL",
+        image: "assets/sol.png",
+        numBTC: "0.00015",
+        numCAD: "15.6",
+    },
+    {
+        name: "Dogecoin",
+        subName: "DOGE",
+        image: "assets/doge.png",
+        numBTC: "0.00015",
+        numCAD: "15.6",
+    },
+    {
+        name: "Tesla",
+        subName: "BTC",
+        image: "assets/teth.png",
+        numBTC: "0.00015",
+        numCAD: "15.6",
+    },
+    {
+        name: "Tron",
+        subName: "TRXS",
+        image: "assets/bnb.png",
+        numBTC: "0.00015",
+        numCAD: "15.6",
+    },
+   
+    {
+        name: "Tesla",
+        subName: "BTC",
+        image: "assets/polig.png",
+        numBTC: "0.00015",
+        numCAD: "15.6",
+    },
+    {
+        name: "Tesla",
+        subName: "BTC",
+        image: "assets/teth.png",
+        numBTC: "0.00015",
+        numCAD: "15.6",
+    },
+];
+
 function renderChart() {
     let chartAssetsContainer = $(".funding__assets__items");
     let chartImageContainer = $(".funding__chart");
@@ -159,13 +247,13 @@ function renderChart() {
 
     let chartIconsContainer = $(".funding__assets__icons");
 
-    let superTesl = $(".funding__assets");
+    let assetsSection = $(".funding__assets");
 
     chartImageContainer.append(chartImage);
 
     let chartAssetsHeader = `<div class="funding__assets__row funding__assets__row--header">
                                   <div class="assets__items">
-                                      
+                                                                     
                                       <div class="assets__item">
                                           Name
                                       </div>
@@ -188,7 +276,7 @@ function renderChart() {
                                   </div>
                              </div>`;
 
-    superTesl.prepend(chartAssetsHeader);
+    assetsSection.prepend(chartAssetsHeader);
 
     // chartAssetsContainer.append(chartAssetsHeader);
 
@@ -197,7 +285,7 @@ function renderChart() {
                               
                                         <div class="assets__items">
   
-                                              <div class="assets__item assets__item--clickable">
+                                              <div class="assets__item assets__item--clickable" data-toggle="modal" data-target="#myModal" type="button">
                                                       
                                                    <div class="assets__items__title">
                                                     ${fundingContent.items[i].itemName}
@@ -239,12 +327,12 @@ function renderChart() {
                                     `);
 
         chartIconsContainer.append(`<div class="funding__assets__icon">
-                                    <img src="${fundingContent.items[i].itemImage}" alt="${fundingContent.items[i].name}"/>
+                                        <img src="${fundingContent.items[i].itemImage}" alt="${fundingContent.items[i].name}"/>
+                                    </div>
                                 `);
     }
 
 }
-
 
 function renderDeposit() {
     let depositContainer = $(".deposit");
@@ -352,17 +440,17 @@ function renderDeposit() {
                                                         ${withdrawContent.percentage100}
                                                     </div>
                                                 </div>
+                                   
+                                                <div class="withdraw__section__select">
 
-                                                <div class="withdraw__section__select">                                                                                                   
-                                                    <div class="text-white px-2"> To </div>
+                                                    <div class="text-white px-2 select__to"> To </div>
 
-                                                    <div class="option__option px-2">
-                                                        ${withdrawContent.option}                                                   
-                                                    </div>
-
-                                                    <div>
-                                                        <img src="${withdrawContent.arrowDown}" alt="arrow"/>                                                        
-                                                    </div>                                                                                                                                  
+                                                    <select class="form-select order__input" aria-label="Default select example">
+                                                        <option class="option__option" selected> ${withdrawContent.option} </option>
+                                                        <option value="1">${withdrawContent.option}</option>
+                                                        <option value="2">${withdrawContent.option}</option>
+                                                        <option value="3">${withdrawContent.option}</option>
+                                                    </select>
                                                 </div>
 
                                                 <div>
@@ -438,10 +526,45 @@ function fundingButtons() {
         $(this).addClass("selected");
     });
 }
+
+function renderModal() {
+    let assets = $(".assets__search__items");
+
+    for (let i = 0; i < modalContent.length; i++) {
+        assets.append(`<div class="assets__search__item"> 
+                        <div class="row assets__search__row">
+                            <div class="col-6 assets__item--left">
+
+                                <div class="assets__image"> 
+                                    <img src="${modalContent[i].image} " alt="assetImage"/>
+                                </div>
+
+                                <div class="assets__name">
+                                    <div class="assets__name__main">${modalContent[i].name}</div>
+                                    <div class="assets__name__secondary">${modalContent[i].subName}</div>
+                                </div>
+                            </div> 
+
+                            <div class="col-6 assets__item--right">
+
+                                <div class="assets__name__main">
+                                    ${modalContent[i].numBTC} BTC
+                                </div>
+
+                                <div class="assets__name__secondary"> ${modalContent[i].numCAD} CAD </div>
+                            </div> 
+                        </div>                                                             
+                     </div>                 
+            `);
+    }
+}
+
 function clickableItem() {
+
     $(".assets__item--clickable").click(function () {
-        alert("io")
+        $(".modal-body__main").show();
     });
+
 }
 
 var arrow;
@@ -452,6 +575,7 @@ $(document).ready(function () {
     renderDeposit();
     fundingButtons();
     clickableItem();
+    renderModal();
 
     arrow = document.querySelector(".funding__items__assets--mobile");
     arrowTop = document.querySelector(".funding__assets__title--mobile")
@@ -489,7 +613,6 @@ if (isMobile) {
 
                 arrow.classList.add("activiosa");
                 arrowTop.classList.add("top__arrow");
-
 
                 break;
 

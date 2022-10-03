@@ -266,6 +266,7 @@ body.modal-open .modal .modal-dialog {
 
 .modal-backdrop.in {
   opacity: 0.8;
+  backdrop-filter: blur(10px);
 }
 
 .modal-content,

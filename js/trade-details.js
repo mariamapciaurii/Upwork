@@ -272,8 +272,6 @@ function renderPrice() {
 
   //Price chart
   for (let i = 0; i < priceChart.length; i = i + 1) {
-    console.log("index", i, priceChart[i]);
-
     if (i === 5) {
       priceChartScrollableContainer.append(`<div class="price-chart__spread">
                                     

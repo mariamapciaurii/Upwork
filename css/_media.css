@@ -683,4 +683,19 @@
     padding-top: 0;
     padding-bottom: 0;
   }
+
+  .select__to {
+    font-size: 13px;
+    top: 20px;
+  }
+
+  /* FUNDING MODAL CONTENT ASSETS */
+
+  .modal-body__wrapper {
+    backdrop-filter: none !important;
+  }
+  .funding__modal-body{
+    padding: 15px !important;
+  }
+
 }
