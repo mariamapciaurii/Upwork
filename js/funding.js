@@ -3,18 +3,20 @@
 let fundingContent = {
     chartImage: "assets/chart.png",
     items: [{
+            id: "0",
             itemImage: "assets/btc-fund.png",
             itemName: "Bitcoin",
             itemSubName: "BCT",
             itemPrice: "7 024",
             itemUsd: "USD",
             itemAmount: "12",
-            itemBalance: "433.12B",
+            itemBalance: "0.00015",
             itemAllocation: "100",
             percentage: "%",
         },
         {
-            itemImage: "assets/bnb.png",
+            id: "1",
+            itemImage: "assets/inu.png",
             itemName: "Bitcoin",
             itemSubName: "GST",
             itemPrice: "16 500",
@@ -25,6 +27,7 @@ let fundingContent = {
             percentage: "%",
         },
         {
+            id: "2",
             itemImage: "assets/doge.png",
             itemName: "DogeCoin",
             itemSubName: "DGC",
@@ -36,6 +39,7 @@ let fundingContent = {
             percentage: "%",
         },
         {
+            id: "3",
             itemImage: "assets/dot.png",
             itemName: "Etherium",
             itemSubName: "ETH",
@@ -47,6 +51,7 @@ let fundingContent = {
             percentage: "%",
         },
         {
+            id: "4",
             itemImage: "assets/eth.png",
             itemName: "Etherium",
             itemSubName: "ETH",
@@ -58,6 +63,7 @@ let fundingContent = {
             percentage: "%",
         },
         {
+            id: "5",
             itemImage: "assets/binance.png",
             itemName: "Etherium",
             itemSubName: "ETH",
@@ -69,6 +75,7 @@ let fundingContent = {
             percentage: "%",
         },
         {
+            id: "6",
             itemImage: "assets/tesla.png",
             itemName: "Etherium",
             itemSubName: "ETH",
@@ -80,6 +87,7 @@ let fundingContent = {
             percentage: "%",
         },
         {
+            id: "7",
             itemImage: "assets/xrx.png",
             itemName: "Etherium",
             itemSubName: "ETH",
@@ -91,6 +99,43 @@ let fundingContent = {
             percentage: "%",
         },
         {
+            id: "8",
+            itemImage: "assets/sol.png",
+            itemName: "Etherium",
+            itemSubName: "ETH",
+            itemPrice: "21 200",
+            itemUsd: "USD",
+            itemAmount: "42",
+            itemBalance: "433.12B",
+            itemAllocation: "100",
+            percentage: "%",
+        },
+        {
+            id: "9",
+            itemImage: "assets/xrx.png",
+            itemName: "Etherium",
+            itemSubName: "ETH",
+            itemPrice: "21 200",
+            itemUsd: "USD",
+            itemAmount: "42",
+            itemBalance: "433.12B",
+            itemAllocation: "100",
+            percentage: "%",
+        },
+        {
+            id: "10",
+            itemImage: "assets/tron.png",
+            itemName: "Etherium",
+            itemSubName: "ETH",
+            itemPrice: "21 200",
+            itemUsd: "USD",
+            itemAmount: "42",
+            itemBalance: "433.12B",
+            itemAllocation: "100",
+            percentage: "%",
+        },
+        {
+            id: "11",
             itemImage: "assets/binance.png",
             itemName: "Etherium",
             itemSubName: "ETH",
@@ -102,6 +147,7 @@ let fundingContent = {
             percentage: "%",
         },
         {
+            id: "12",
             itemImage: "assets/binance.png",
             itemName: "Etherium",
             itemSubName: "ETH",
@@ -149,94 +195,6 @@ let withdrawContent = {
     arrowDown: "assets/arrow-down.svg",
 };
 
-let modalContent = [
-    {
-        name: "Bitcoin",
-        subName: "BTC",
-        image: "assets/btc-fund.png",
-        numBTC: "0.00015",
-        numCAD: "15.6",
-    },
-    {
-        name: "Etherium",
-        subName: "ETH",
-        image: "assets/eth.png",
-        numBTC: "0.00015",
-        numCAD: "15.6",
-    },
-    {
-        name: "Tether",
-        subName: "USDT",
-        image: "assets/teth.png",
-        numBTC: "0.00015",
-        numCAD: "15.6",
-    },
-    {
-        name: "Tesla",
-        subName: "BTC",
-        image: "assets/inu.png",
-        numBTC: "0.00015",
-        numCAD: "15.6",
-    },
-    {
-        name: "Binance",
-        subName: "BNB",
-        image: "assets/binance.png",
-        numBTC: "0.00015",
-        numCAD: "15.6",
-    },
-    {
-        name: "XRP",
-        subName: "XRP",
-        image: "assets/xrx.png",
-        numBTC: "0.00015",
-        numCAD: "15.6",
-    },
-    {
-        name: "Solana",
-        subName: "SOL",
-        image: "assets/sol.png",
-        numBTC: "0.00015",
-        numCAD: "15.6",
-    },
-    {
-        name: "Dogecoin",
-        subName: "DOGE",
-        image: "assets/doge.png",
-        numBTC: "0.00015",
-        numCAD: "15.6",
-    },
-    {
-        name: "Tesla",
-        subName: "BTC",
-        image: "assets/teth.png",
-        numBTC: "0.00015",
-        numCAD: "15.6",
-    },
-    {
-        name: "Tron",
-        subName: "TRXS",
-        image: "assets/bnb.png",
-        numBTC: "0.00015",
-        numCAD: "15.6",
-    },
-   
-    {
-        name: "Tesla",
-        subName: "BTC",
-        image: "assets/polig.png",
-        numBTC: "0.00015",
-        numCAD: "15.6",
-    },
-    {
-        name: "Tesla",
-        subName: "BTC",
-        image: "assets/teth.png",
-        numBTC: "0.00015",
-        numCAD: "15.6",
-    },
-];
-
 function renderChart() {
     let chartAssetsContainer = $(".funding__assets__items");
     let chartImageContainer = $(".funding__chart");
@@ -248,6 +206,9 @@ function renderChart() {
     let chartIconsContainer = $(".funding__assets__icons");
 
     let assetsSection = $(".funding__assets");
+
+    let assets = $(".assets__search__items");
+
 
     chartImageContainer.append(chartImage);
 
@@ -285,15 +246,14 @@ function renderChart() {
                               
                                         <div class="assets__items">
   
-                                              <div class="assets__item assets__item--clickable" data-toggle="modal" data-target="#myModal" type="button">
+                                              <div class="assets__item assets__item--clickable" data-toggle="modal" data-target="#myModal" type="button" data-id="${fundingContent.items[i].id}">
                                                       
                                                    <div class="assets__items__title">
                                                     ${fundingContent.items[i].itemName}
                                                   </div>
   
                                                   <div class="assets__item__subname">
-                                                    ${fundingContent.items[i].itemSubName} 
-                                                      
+                                                    ${fundingContent.items[i].itemSubName}                                                     
                                                   </div>                                                    
                                    
                                               </div>
@@ -330,6 +290,47 @@ function renderChart() {
                                         <img src="${fundingContent.items[i].itemImage}" alt="${fundingContent.items[i].name}"/>
                                     </div>
                                 `);
+    }
+
+
+    for (let i = 0; i < fundingContent.items.length; i++) {
+        console.log("123");
+        assets.append(`<div class="assets__search__item" data-id="${fundingContent.items[i].id}"> 
+
+                        <div class="row assets__search__row">
+
+                            <div class="col-6 assets__item--left">
+
+                                <div class="assets__image"> 
+                                    <img src="${fundingContent.items[i].itemImage}" alt="assetImage"/>
+                                </div>
+
+                                <div class="assets__name">
+                                    <div class="assets__name__main">
+                                        ${fundingContent.items[i].itemName}                                 
+                                    </div>
+
+                                    <div class="assets__name__secondary">
+                                        ${fundingContent.items[i].itemSubName}                                                                                       
+                                    </div>
+                                </div>
+                            </div> 
+
+                            <div class="col-6 assets__item--right">
+
+                                <div class="assets__name__main d-flex">
+                                    ${fundingContent.items[i].itemBalance}
+                                    ${fundingContent.items[i].itemSubName}                                                                                                                     
+                                </div>
+
+                                <div class="assets__name__secondary"> 
+                                    ${fundingContent.items[i].itemAmount} CAD 
+                                </div>
+                            </div>
+
+                        </div>                                                             
+                     </div>                 
+            `);
     }
 
 }
@@ -527,45 +528,6 @@ function fundingButtons() {
     });
 }
 
-function renderModal() {
-    let assets = $(".assets__search__items");
-
-    for (let i = 0; i < modalContent.length; i++) {
-        assets.append(`<div class="assets__search__item"> 
-                        <div class="row assets__search__row">
-                            <div class="col-6 assets__item--left">
-
-                                <div class="assets__image"> 
-                                    <img src="${modalContent[i].image} " alt="assetImage"/>
-                                </div>
-
-                                <div class="assets__name">
-                                    <div class="assets__name__main">${modalContent[i].name}</div>
-                                    <div class="assets__name__secondary">${modalContent[i].subName}</div>
-                                </div>
-                            </div> 
-
-                            <div class="col-6 assets__item--right">
-
-                                <div class="assets__name__main">
-                                    ${modalContent[i].numBTC} BTC
-                                </div>
-
-                                <div class="assets__name__secondary"> ${modalContent[i].numCAD} CAD </div>
-                            </div> 
-                        </div>                                                             
-                     </div>                 
-            `);
-    }
-}
-
-function clickableItem() {
-
-    $(".assets__item--clickable").click(function () {
-        $(".modal-body__main").show();
-    });
-
-}
 
 var arrow;
 var arrowTop;
@@ -574,8 +536,37 @@ $(document).ready(function () {
     renderChart();
     renderDeposit();
     fundingButtons();
-    clickableItem();
-    renderModal();
+    // clickableItem();
+
+    $(".assets__item--clickable").click(function (e) {
+        const newRowArray = Array.from($(".assets__search__item"));
+
+        newRowArray.forEach(row => {
+            if (e.currentTarget.dataset.id === row.dataset.id) {
+                row.classList.add("tornike")
+                return
+            }
+            // console.log(row.dataset.id);
+        });
+
+        let template = null;
+
+        $(".modal").on("show.bs.modal", function (event) {
+            template = $(this).html();
+        });
+
+    })
+
+    $(".modal").click((e) => {
+        e.stopPropagation();
+        const newRowArray = Array.from($(".assets__search__item"));
+
+        newRowArray.forEach(row => {
+            if (row.classList.contains("tornike")) {
+                row.classList.remove("tornike");
+            }
+        });
+    })
 
     arrow = document.querySelector(".funding__items__assets--mobile");
     arrowTop = document.querySelector(".funding__assets__title--mobile")
@@ -583,7 +574,6 @@ $(document).ready(function () {
     let headerItems = $(".funding__assets__row--header");
 
     // listItems.scrollLeft = 120;
-
     headerItems.scroll(function ($event) {
         if ($event) {
             let scrollLeft = this.scrollLeft;

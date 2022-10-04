@@ -631,7 +631,8 @@ body.modal-open .modal .modal-dialog {
 .modal-body__wrapper {
   width: 100%;
   height: 685px;
-  background: rgba(0, 0, 0, 0.7);
+  /* background: rgba(0, 0, 0, 0.7); */
+  background-color: red;
   backdrop-filter: blur(10px);
   color: white;
 }
@@ -688,6 +689,10 @@ body.modal-open .modal .modal-dialog {
   cursor: pointer;
 }
 
+.assets__search__item:hover {
+  background: rgba(19, 19, 30, 0.71);
+}
+
 .assets__item--left {
   display: flex;
   align-items: start;
@@ -726,9 +731,13 @@ body.modal-open .modal .modal-dialog {
 .assets__image img {
   width: 37px;
 }
-.assets__search__item :hover{
-  background: rgba(19, 19, 30, 0.71);
-}
-.assets__search__row{
+
+
+.assets__search__row {
   padding: 10px;
+}
+
+.tornike {
+  background-color: rgb(102, 98, 98);
+  opacity: 0.8;
 }
